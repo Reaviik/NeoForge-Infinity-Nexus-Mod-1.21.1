@@ -1,0 +1,21 @@
+{
+  "type": "infinity_nexus_mod:pressing",
+  "energy": 9600,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_4"
+    },
+    {
+      "item": "infinity_nexus_mod:bronze_rod",
+      "count": 1
+    },
+    {
+      "item": "infinity_nexus_mod:gold_screw_cast"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:bronze_screw",
+    "count": 2
+  }
+}

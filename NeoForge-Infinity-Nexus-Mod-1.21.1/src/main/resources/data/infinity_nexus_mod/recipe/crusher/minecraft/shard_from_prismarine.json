@@ -1,0 +1,19 @@
+{
+  "type": "infinity_nexus_mod:crushing",
+  "energy": 1500,
+  "duration": 130,
+  "can_duplicate": true,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_2"
+    },
+    {
+      "item": "minecraft:prismarine",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "minecraft:prismarine_shard",
+    "count": 1
+  }
+}

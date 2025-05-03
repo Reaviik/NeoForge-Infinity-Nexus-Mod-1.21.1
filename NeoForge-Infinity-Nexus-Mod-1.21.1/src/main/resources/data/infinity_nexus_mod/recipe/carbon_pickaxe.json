@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    "$": {
+      "item": "minecraft:netherite_pickaxe"
+    }
+  },
+  "pattern": [
+    " @ ",
+    "@$@",
+    "   "
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:carbon_pickaxe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,62 @@
+{
+  "type": "infinity_nexus_mod:factory",
+  "duration": 5520,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_7"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:iridium"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:iridium"
+    },
+    {
+      "item": "infinity_nexus_mod:iridium"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:iridium"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_block"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:infinity_singularity",
+    "count": 1
+  }
+}

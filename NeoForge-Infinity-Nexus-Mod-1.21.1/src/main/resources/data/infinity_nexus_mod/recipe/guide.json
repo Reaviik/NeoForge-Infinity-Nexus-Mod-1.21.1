@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:redstone"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "C": {
+      "item": "minecraft:feather"
+    }
+  },
+  "pattern": [
+    "BA",
+    "C "
+  ],
+  "result": {
+    "id": "guideme:guide",
+    "nbt":{
+      "guideId":"infinity_nexus_mod:guide"
+    }
+  },
+  "show_notification": true
+}

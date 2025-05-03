@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "$": {
+      "item": "minecraft:bucket"
+    },
+    "#": {
+      "item": "infinity_nexus_mod:unstable_matter"
+    }
+  },
+  "pattern": [
+    "   ",
+    " # ",
+    "$# "
+  ],
+  "result": {
+    "id": "minecraft:water_bucket",
+    "count": 1
+  },
+  "show_notification": true
+}

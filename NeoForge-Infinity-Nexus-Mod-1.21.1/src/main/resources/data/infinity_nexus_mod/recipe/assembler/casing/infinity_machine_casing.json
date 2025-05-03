@@ -1,0 +1,38 @@
+{
+  "type": "infinity_nexus_mod:assembler",
+  "duration": 130,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_8"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_rod"
+    },
+    {
+      "item": "infinity_nexus_miner:darium_crystal"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_screw"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_sheet"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_sheet"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_screw"
+    },
+    {
+      "tag": "infinity_nexus_mod:machine_tier_6"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_rod"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:infinity_machine_casing",
+    "count": 1
+  }
+}

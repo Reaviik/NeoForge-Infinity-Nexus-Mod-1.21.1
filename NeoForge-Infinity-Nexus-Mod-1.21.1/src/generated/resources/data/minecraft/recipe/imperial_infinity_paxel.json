@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinity_nexus_mod:imperial_infinity_axe"
+    },
+    "B": {
+      "item": "infinity_nexus_mod:imperial_infinity_sword"
+    },
+    "C": {
+      "item": "infinity_nexus_mod:imperial_infinity_pickaxe"
+    },
+    "D": {
+      "item": "infinity_nexus_mod:imperial_infinity_shovel"
+    },
+    "E": {
+      "item": "infinity_nexus_mod:imperial_infinity_hoe"
+    }
+  },
+  "pattern": [
+    "ABC",
+    " D ",
+    " E "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:imperial_infinity_paxel"
+  }
+}

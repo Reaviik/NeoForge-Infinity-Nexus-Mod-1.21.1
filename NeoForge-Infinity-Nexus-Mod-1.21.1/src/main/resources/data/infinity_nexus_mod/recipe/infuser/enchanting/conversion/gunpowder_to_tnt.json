@@ -1,0 +1,14 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:gunpowder",
+      "count": 5
+    }
+  ],
+  "output": {
+    "id": "minecraft:tnt",
+    "count": 1
+  },
+  "pedestals": [2,3,6]
+}

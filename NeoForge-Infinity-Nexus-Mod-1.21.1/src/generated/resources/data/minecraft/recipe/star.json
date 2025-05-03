@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinity_nexus_mod:star_fragment"
+    }
+  },
+  "pattern": [
+    " A ",
+    "AAA",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:nether_star"
+  }
+}

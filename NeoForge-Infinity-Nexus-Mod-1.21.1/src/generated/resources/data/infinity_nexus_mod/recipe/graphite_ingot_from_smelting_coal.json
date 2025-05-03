@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "graphite_ingot",
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:graphite_ingot"
+  }
+}

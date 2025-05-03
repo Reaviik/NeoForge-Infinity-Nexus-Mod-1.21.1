@@ -1,0 +1,29 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "infinity_nexus_mod:block/solar/solar_side",
+		"2": "infinity_nexus_mod:block/solar/solar_top_2",
+		"3": "infinity_nexus_mod:block/solar/solar_bottom",
+		"particle": "infinity_nexus_mod:block/solar/solar_side"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
+			}
+		}
+	],
+	"display": {
+		"gui": {
+			"rotation": [30, 225, 0],
+			"scale": [0.625, 0.625, 0.625]
+		}
+	}
+}

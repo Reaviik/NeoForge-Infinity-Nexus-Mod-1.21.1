@@ -1,0 +1,6 @@
+{
+  "variants":{
+    "lit=0":{"model": "infinity_nexus_mod:block/compactor_on"},
+    "lit=1":{"model": "infinity_nexus_mod:block/compactor"}
+  }
+}

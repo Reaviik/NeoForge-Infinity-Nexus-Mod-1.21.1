@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "facing=up,lit=0": {"model": "infinity_nexus_mod:block/translocator_energy"},
+    "facing=down,lit=0": {"model": "infinity_nexus_mod:block/translocator_energy", "x": 180 },
+    "facing=north,lit=0": {"model": "infinity_nexus_mod:block/translocator_energy" , "x": 90},
+    "facing=south,lit=0": {"model": "infinity_nexus_mod:block/translocator_energy" , "x": -90},
+    "facing=east,lit=0": {"model": "infinity_nexus_mod:block/translocator_energy", "y": -90, "x": -90},
+    "facing=west,lit=0": {"model": "infinity_nexus_mod:block/translocator_energy", "y": 90, "x": -90},
+
+    "facing=up,lit=1": {"model": "infinity_nexus_mod:block/translocator_energy_0_on"},
+    "facing=down,lit=1": {"model": "infinity_nexus_mod:block/translocator_energy_0_on", "x": 180 },
+    "facing=north,lit=1": {"model": "infinity_nexus_mod:block/translocator_energy_0_on" , "x": 90},
+    "facing=south,lit=1": {"model": "infinity_nexus_mod:block/translocator_energy_0_on" , "x": -90},
+    "facing=east,lit=1": {"model": "infinity_nexus_mod:block/translocator_energy_0_on", "y": -90, "x": -90},
+    "facing=west,lit=1": {"model": "infinity_nexus_mod:block/translocator_energy_0_on", "y": 90, "x": -90},
+
+    "facing=up,lit=2": {"model": "infinity_nexus_mod:block/translocator_energy_1_on"},
+    "facing=down,lit=2": {"model": "infinity_nexus_mod:block/translocator_energy_1_on", "x": 180 },
+    "facing=north,lit=2": {"model": "infinity_nexus_mod:block/translocator_energy_1_on" , "x": 90},
+    "facing=south,lit=2": {"model": "infinity_nexus_mod:block/translocator_energy_1_on" , "x": -90},
+    "facing=east,lit=2": {"model": "infinity_nexus_mod:block/translocator_energy_1_on", "y": -90, "x": -90},
+    "facing=west,lit=2": {"model": "infinity_nexus_mod:block/translocator_energy_1_on", "y": 90, "x": -90},
+
+    "facing=up,lit=3": {"model": "infinity_nexus_mod:block/translocator_energy_2_on"},
+    "facing=down,lit=3": {"model": "infinity_nexus_mod:block/translocator_energy_2_on", "x": 180 },
+    "facing=north,lit=3": {"model": "infinity_nexus_mod:block/translocator_energy_2_on" , "x": 90},
+    "facing=south,lit=3": {"model": "infinity_nexus_mod:block/translocator_energy_2_on" , "x": -90},
+    "facing=east,lit=3": {"model": "infinity_nexus_mod:block/translocator_energy_2_on", "y": -90, "x": -90},
+    "facing=west,lit=3": {"model": "infinity_nexus_mod:block/translocator_energy_2_on", "y": 90, "x": -90},
+
+    "facing=up,lit=4": {"model": "infinity_nexus_mod:block/translocator_energy_3_on"},
+    "facing=down,lit=4": {"model": "infinity_nexus_mod:block/translocator_energy_3_on", "x": 180 },
+    "facing=north,lit=4": {"model": "infinity_nexus_mod:block/translocator_energy_3_on" , "x": 90},
+    "facing=south,lit=4": {"model": "infinity_nexus_mod:block/translocator_energy_3_on" , "x": -90},
+    "facing=east,lit=4": {"model": "infinity_nexus_mod:block/translocator_energy_3_on", "y": -90, "x": -90},
+    "facing=west,lit=4": {"model": "infinity_nexus_mod:block/translocator_energy_3_on", "y": 90, "x": -90},
+
+    "facing=up,lit=5": {"model": "infinity_nexus_mod:block/translocator_energy_4_on"},
+    "facing=down,lit=5": {"model": "infinity_nexus_mod:block/translocator_energy_4_on", "x": 180 },
+    "facing=north,lit=5": {"model": "infinity_nexus_mod:block/translocator_energy_4_on" , "x": 90},
+    "facing=south,lit=5": {"model": "infinity_nexus_mod:block/translocator_energy_4_on" , "x": -90},
+    "facing=east,lit=5": {"model": "infinity_nexus_mod:block/translocator_energy_4_on", "y": -90, "x": -90},
+    "facing=west,lit=5": {"model": "infinity_nexus_mod:block/translocator_energy_4_on", "y": 90, "x": -90},
+
+    "facing=up,lit=6": {"model": "infinity_nexus_mod:block/translocator_energy_off"},
+    "facing=down,lit=6": {"model": "infinity_nexus_mod:block/translocator_energy_off", "x": 180 },
+    "facing=north,lit=6": {"model": "infinity_nexus_mod:block/translocator_energy_off" , "x": 90},
+    "facing=south,lit=6": {"model": "infinity_nexus_mod:block/translocator_energy_off" , "x": -90},
+    "facing=east,lit=6": {"model": "infinity_nexus_mod:block/translocator_energy_off", "y": -90, "x": -90},
+    "facing=west,lit=6": {"model": "infinity_nexus_mod:block/translocator_energy_off", "y": 90, "x": -90}
+  }
+}

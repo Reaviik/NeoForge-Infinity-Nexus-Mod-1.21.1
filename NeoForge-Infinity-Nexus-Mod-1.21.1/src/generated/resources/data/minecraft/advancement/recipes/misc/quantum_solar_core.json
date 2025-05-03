@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_quantum_solar_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infinity_nexus_mod:quantum_solar_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quantum_solar_core"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_quantum_solar_core"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quantum_solar_core"
+    ]
+  }
+}

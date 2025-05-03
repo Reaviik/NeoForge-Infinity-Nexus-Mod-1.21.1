@@ -1,0 +1,38 @@
+{
+  "type": "infinity_nexus_mod:assembler",
+  "duration": 130,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_5"
+    },
+    {
+      "item": "infinity_nexus_mod:steel_rod"
+    },
+    {
+      "item": "infinity_nexus_miner:rubium_crystal"
+    },
+    {
+      "item": "infinity_nexus_mod:steel_screw"
+    },
+    {
+      "item": "infinity_nexus_mod:steel_sheet"
+    },
+    {
+      "item": "infinity_nexus_mod:steel_sheet"
+    },
+    {
+      "item": "infinity_nexus_mod:steel_screw"
+    },
+    {
+      "tag": "infinity_nexus_mod:machine_tier_3"
+    },
+    {
+      "item": "infinity_nexus_mod:steel_rod"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:steel_machine_casing",
+    "count": 1
+  }
+}

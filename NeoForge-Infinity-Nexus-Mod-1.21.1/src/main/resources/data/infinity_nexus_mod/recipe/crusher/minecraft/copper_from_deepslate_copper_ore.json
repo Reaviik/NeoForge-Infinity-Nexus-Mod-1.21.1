@@ -1,0 +1,19 @@
+{
+  "type": "infinity_nexus_mod:crushing",
+  "energy": 1200,
+  "duration": 130,
+  "can_duplicate": true,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_1"
+    },
+    {
+      "item": "minecraft:deepslate_copper_ore",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:copper_dust",
+    "count": 1
+  }
+}

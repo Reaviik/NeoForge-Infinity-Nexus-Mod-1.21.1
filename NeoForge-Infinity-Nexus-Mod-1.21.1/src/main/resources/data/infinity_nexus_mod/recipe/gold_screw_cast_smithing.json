@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "result": {
+    "id": "infinity_nexus_mod:gold_screw_cast"
+  },
+  "template": {
+    "item": "infinity_nexus_mod:screw_clay_model"
+  }
+}

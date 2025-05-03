@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinity_nexus_mod:infinity_ingot"
+    },
+    "B": {
+      "item": "infinity_nexus_mod:carbon_boots"
+    }
+  },
+  "pattern": [
+    "A A",
+    "ABA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:infinity_boots"
+  }
+}

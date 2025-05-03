@@ -1,0 +1,25 @@
+{
+  "type": "infinity_nexus_mod:crushing",
+  "energy": 2400,
+  "duration": 130,
+  "can_duplicate": true,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_2"
+    },
+    {
+      "item": "mekanism:osmium_ore",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "mekanism:dust_osmium",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}

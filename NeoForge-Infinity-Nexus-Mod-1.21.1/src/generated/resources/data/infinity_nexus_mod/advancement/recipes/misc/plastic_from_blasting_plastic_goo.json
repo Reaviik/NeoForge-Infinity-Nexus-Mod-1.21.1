@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plastic_goo": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infinity_nexus_mod:plastic_goo"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinity_nexus_mod:plastic_from_blasting_plastic_goo"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plastic_goo"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinity_nexus_mod:plastic_from_blasting_plastic_goo"
+    ]
+  }
+}
