@@ -1,0 +1,31 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "items": "minecraft:writable_book",
+      "components": {
+        "minecraft:writable_book_content": {
+          "pages": [
+            {
+              "raw": "swift_sneak"
+            }
+          ]
+        }
+      },
+      "type": "neoforge:components"
+    }
+  ],
+  "output": {
+    "id": "minecraft:enchanted_book",
+    "type": "neoforge:components",
+    "count": 1,
+    "components": {
+        "minecraft:stored_enchantments": {
+          "levels": {
+            "minecraft:swift_sneak": 1
+          }
+        }
+    }
+  },
+  "pedestals": [1, 2, 3, 4, 5, 6]
+}

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "infinity_nexus_mod:glycerin"
+    },
+    {
+      "item": "infinity_nexus_mod:vinegar_bottle"
+    },
+    {
+      "item": "infinity_nexus_mod:starch"
+    },
+    {
+      "item": "infinity_nexus_mod:starch"
+    },
+    {
+      "item": "infinity_nexus_mod:starch"
+    },
+    {
+      "item": "infinity_nexus_mod:starch"
+    },
+    {
+      "type": "neoforge:components",
+      "items": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:water"
+        }
+      }
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "infinity_nexus_mod:plastic_goo"
+  }
+}

@@ -1,0 +1,8 @@
+[V] Duplicação de minérios no Crusher
+[X] Mostrar a area de ação do MobCrusher
+[V] Consertar o fly da armadura
+[X] Algum sistema de craft magico ou mystico
+[X] Criar um mob para carda ORB
+[X] Arumar a animação dos mobs para nã ose sobrepor umas as outras
+[V] Fazer a paxel Funcionar como esperado
+[V] Corrigir imput de items da assembler para craft automatico

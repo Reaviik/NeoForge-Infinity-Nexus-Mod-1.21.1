@@ -1,0 +1,24 @@
+
+{
+  "variants":{
+    "lit=0":{"model": "infinity_nexus_mod:block/battery"},
+    "lit=1":{"model": "infinity_nexus_mod:block/battery_1"},
+    "lit=2":{"model": "infinity_nexus_mod:block/battery_2"},
+    "lit=3":{"model": "infinity_nexus_mod:block/battery_3"},
+    "lit=4":{"model": "infinity_nexus_mod:block/battery_4"},
+    "lit=5":{"model": "infinity_nexus_mod:block/battery_5"},
+    "lit=6":{"model": "infinity_nexus_mod:block/battery_6"},
+    "lit=7":{"model": "infinity_nexus_mod:block/battery_7"},
+    "lit=8":{"model": "infinity_nexus_mod:block/battery_8"},
+
+    "lit=9":{"model": "infinity_nexus_mod:block/battery"},
+    "lit=10":{"model": "infinity_nexus_mod:block/battery_1"},
+    "lit=11":{"model": "infinity_nexus_mod:block/battery_2"},
+    "lit=12":{"model": "infinity_nexus_mod:block/battery_3"},
+    "lit=13":{"model": "infinity_nexus_mod:block/battery_4"},
+    "lit=14":{"model": "infinity_nexus_mod:block/battery_5"},
+    "lit=15":{"model": "infinity_nexus_mod:block/battery_6"},
+    "lit=16":{"model": "infinity_nexus_mod:block/battery_7"},
+    "lit=17":{"model": "infinity_nexus_mod:block/battery_8"}
+  }
+}

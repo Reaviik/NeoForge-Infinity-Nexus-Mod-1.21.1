@@ -1,0 +1,27 @@
+{
+  "type": "infinity_nexus_mod:melting",
+  "energy": 1200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_7",
+      "count": 1
+    },
+    {
+      "item": "minecraft:blaze_powder",
+      "count": 2
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_dust",
+      "count": 1
+    },
+    {
+      "item": "minecraft:gunpowder",
+      "count": 2
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:infinity_nugget",
+    "count": 1
+  }
+}

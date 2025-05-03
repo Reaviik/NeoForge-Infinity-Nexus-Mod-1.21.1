@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    "title": "Infinity nexus",
+    "description": "Não há nada tão bom que não possa ser infinito",
+    "background": "infinity_nexus_mod:textures/block/infinity_block.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "infinity_nexus_mod:raw_infinity"
+          }
+        ]
+      }
+    }
+  }
+}

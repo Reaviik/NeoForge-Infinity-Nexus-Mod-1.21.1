@@ -1,0 +1,23 @@
+{
+  "type": "infinity_nexus_mod:pressing",
+  "energy": 19200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_7",
+      "count": 1
+    },
+    {
+      "item": "infinity_nexus_mod:iridium",
+      "count": 2
+    },
+    {
+      "item": "infinity_nexus_mod:gold_ingot_cast",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:iridium_ingot",
+    "count": 1
+  }
+}

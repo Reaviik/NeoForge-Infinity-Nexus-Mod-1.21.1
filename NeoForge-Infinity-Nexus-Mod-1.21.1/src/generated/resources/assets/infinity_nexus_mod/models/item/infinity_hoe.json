@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "infinity_nexus_mod:item/infinity_hoe"
+  }
+}

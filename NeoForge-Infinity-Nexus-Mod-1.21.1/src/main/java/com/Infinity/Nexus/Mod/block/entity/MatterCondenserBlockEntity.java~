@@ -1,0 +1,281 @@
+package com.Infinity.Nexus.Mod.block.entity;
+
+import com.Infinity.Nexus.Core.block.entity.common.SetMachineLevel;
+import com.Infinity.Nexus.Core.utils.EnergyUtils;
+import com.Infinity.Nexus.Core.utils.ItemStackHandlerUtils;
+import com.Infinity.Nexus.Core.utils.ModUtils;
+import com.Infinity.Nexus.Core.utils.SoundUtils;
+import com.Infinity.Nexus.Mod.block.custom.MatterCondenser;
+import com.Infinity.Nexus.Mod.config.ConfigUtils;
+import com.Infinity.Nexus.Mod.item.ModItemsProgression;
+import com.Infinity.Nexus.Mod.screen.condenser.CondenserMenu;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.energy.IEnergyStorage;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public class MatterCondenserBlockEntity extends BaseMenuProviderBlockEntity {
+    private final int ENERGY_REQ = 1;
+    private final int EXTRATED_ENERGY = ENERGY_CAPACITY / 5000;
+
+    private int matterProgress = 0;
+    private int maxMatterProgress = ENERGY_CAPACITY / 20;
+    private int catalystLevel = 0;
+    private int amplifier = 0;
+
+    private ContainerData matterData;
+
+
+    public MatterCondenserBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(
+                ModBlockEntities.MATTER_CONDENSER_BE.get(),
+                pPos,
+                pBlockState,
+                Component.translatable("block.infinity_nexus_mod.matter_condenser"),
+                new int[] {0},
+                1,
+                new int[] {},
+                2,
+                ConfigUtils.matter_condenser_energy_storage_capacity,
+                ConfigUtils.matter_condenser_energy_transfer_rate
+
+        );
+        this.matterData = new ContainerData() {
+            @Override
+            public int get(int pIndex) {
+                return switch (pIndex) {
+                    case 0 -> MatterCondenserBlockEntity.this.matterProgress;
+                    case 1 -> MatterCondenserBlockEntity.this.maxMatterProgress;
+                    case 2 -> MatterCondenserBlockEntity.this.catalystLevel;
+                    case 3 -> MatterCondenserBlockEntity.this.amplifier;
+                    default -> 0;
+                };
+            }
+
+            @Override
+            public void set(int pIndex, int pValue) {
+                switch (pIndex) {
+                    case 0 -> MatterCondenserBlockEntity.this.matterProgress = pValue;
+                    case 1 -> MatterCondenserBlockEntity.this.maxMatterProgress = pValue;
+                    case 2 -> MatterCondenserBlockEntity.this.catalystLevel = pValue;
+                    case 3 -> MatterCondenserBlockEntity.this.amplifier = pValue;
+                }
+            }
+
+            @Override
+            public int getCount() {
+                return 4;
+            }
+        };
+    }
+    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+        @Override
+        protected void onContentsChanged(int slot) {
+            setChanged();
+        }
+
+        @Override
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            return switch (slot) {
+                case 0 -> stack.is(ModItemsProgression.RESIDUAL_MATTER.get());
+                case 1 -> false;
+                case 2 -> ModUtils.isComponent(stack);
+
+                default -> super.isItemValid(slot, stack);
+            };
+        }
+    };
+
+
+
+    public void drops() {
+        ItemStack catalystStack = new ItemStack(ModItemsProgression.RESIDUAL_MATTER.get());
+        catalystStack.setCount(catalystLevel);
+        ItemEntity catalyst = new ItemEntity( level, this.getBlockPos().getX() + 0.5, this.getBlockPos().getY() + 0.5, this.getBlockPos().getZ() + 0.5, catalystStack);
+        level.addFreshEntity(catalyst);
+        dropContents(level, this.worldPosition, this.itemHandler);
+    }
+
+
+    @Override
+    protected void saveAdditional(CompoundTag pTag, HolderLookup.Provider registries) {
+        pTag.put("inventory", itemHandler.serializeNBT(registries));
+        pTag.putInt("matter_condenser.progress", matterProgress);
+        pTag.putInt("matter_condenser.catalyst_level", catalystLevel);
+        pTag.putInt("matter_condenser.amplifier", amplifier);
+        pTag.putInt("matter_condenser.energy", ENERGY_STORAGE.getEnergyStored());
+
+        super.saveAdditional(pTag, registries);
+    }
+
+    @Override
+    protected void loadAdditional(CompoundTag pTag, HolderLookup.Provider registries) {
+        super.loadAdditional(pTag, registries);
+        itemHandler.deserializeNBT(registries, pTag.getCompound("inventory"));
+        matterProgress = pTag.getInt("matter_condenser.progress");
+        catalystLevel = pTag.getInt("matter_condenser.catalyst_level");
+        amplifier = pTag.getInt("matter_condenser.amplifier");
+        ENERGY_STORAGE.setEnergy(pTag.getInt("matter_condenser.energy"));
+    }
+
+    @Override
+    public Component getDisplayName() {
+        return Component.translatable("block.infinity_nexus_mod.matter_condenser").append(" LV "+ getMachineLevel());
+    }
+
+    @Nullable
+    @Override
+    public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
+        return new CondenserMenu(pContainerId, pPlayerInventory, this, this.matterData, itemHandler);
+    }
+
+    public IItemHandler getItemHandler(Direction direction) {
+        return itemHandler;
+    }
+    public IEnergyStorage getEnergyStorage(Direction direction) {
+        return ENERGY_STORAGE;
+    }
+    public int getProgress() {
+        return this.matterProgress;
+    }
+    public int getMaxProgress() {
+        return this.maxMatterProgress;
+    }
+    public int getCatalystLevel() {
+        return this.catalystLevel;
+    }
+    public int getAmplifier() {
+        return this.amplifier;
+    }
+
+    public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
+
+        if (pLevel.isClientSide) {
+            return;
+        }
+        increaseCatalystLevel();
+
+        int machineLevel = Math.max(getMachineLevel() - 1, 0);
+        pLevel.setBlock(pPos, pState.setValue(MatterCondenser.LIT, machineLevel), 3);
+
+        if(!canTick(itemHandler)){
+            return;
+        }
+
+        if (isRedstonePowered(pPos)) {
+            return;
+        }
+        if (!hasEnoughEnergy()) {
+            return;
+        }
+
+        if(!hasFreeSlot()){
+            return;
+        }
+
+        pLevel.setBlock(pPos, pState.setValue(MatterCondenser.LIT, machineLevel+9), 3);
+        this.increaseCraftingProgress(machineLevel);
+        setChanged(pLevel, pPos, pState);
+
+        if (hasProgressFinished()) {
+            craftItem();
+            resetProgress();
+        }
+    }
+    @Override
+    protected boolean hasProgressFinished() {
+        this.matterData.set(0, matterProgress);
+        return matterProgress >= maxMatterProgress;
+    }
+
+    @Override
+    protected void increaseCraftingProgress() {
+        this.matterData.set(0, matterProgress);
+        matterProgress++;
+    }
+    @Override
+    protected void resetProgress() {
+        this.matterData.set(0, 0);
+        matterProgress = 0;
+    }
+    @Override
+    protected boolean canTick(ItemStackHandler itemHandler) {
+        return !itemHandler.getStackInSlot(getComponentSlot()).isEmpty();
+    }
+
+    private boolean hasFreeSlot() {
+        return ItemStackHandlerUtils.canInsertItemAndAmountIntoOutputSlot(ModItemsProgression.UNSTABLE_MATTER.get(), 1, OUTPUT_SLOT, itemHandler);
+    }
+
+    private void increaseCatalystLevel() {
+        if(itemHandler.getStackInSlot(INPUT_SLOT[0]).is(ModItemsProgression.RESIDUAL_MATTER.get())){
+            if(catalystLevel < 500000){
+                itemHandler.extractItem(INPUT_SLOT[0], 1, false);
+                catalystLevel++;
+            }
+        }
+    }
+
+    private boolean hasEnoughEnergy() {
+        return ENERGY_STORAGE.getEnergyStored() >= ENERGY_REQ;
+    }
+
+    private void craftItem() {
+
+        ItemStack component = this.itemHandler.getStackInSlot(COMPONENT_SLOT);
+        ModUtils.useComponent(component, level, this.getBlockPos());
+
+        ItemStack result = new ItemStack(ModItemsProgression.UNSTABLE_MATTER.get(), itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + 1);
+        ItemStackHandlerUtils.setStackInSlot(OUTPUT_SLOT, result, itemHandler);
+
+        SoundUtils.playSoundHideoutMuffler(level, worldPosition, itemHandler, new int[]{0}, SoundEvents.BEACON_POWER_SELECT);
+    }
+
+    private int getMachineLevel(){
+        return ModUtils.getComponentLevel(this.itemHandler.getStackInSlot(COMPONENT_SLOT));
+    }
+
+    private void increaseCraftingProgress(int machineLevel) {
+        int energyStored = ENERGY_STORAGE.getEnergyStored();
+
+        int extractedEnergy = Math.min(EXTRATED_ENERGY * (machineLevel + 1), energyStored);
+
+        if (energyStored >= extractedEnergy) {
+
+            if(catalystLevel > 0 && amplifier <= 0){
+                catalystLevel --;
+                amplifier = 20;
+            }
+            if (amplifier > 0) {
+                matterProgress += (int) (extractedEnergy * 1.2f);
+                extractedEnergy = (int) (extractedEnergy * 0.8);
+                amplifier --;
+            }else{
+                matterProgress += extractedEnergy;
+            }
+            extractEnergy(extractedEnergy);
+        }
+    }
+    private void extractEnergy(int extractedEnergy) {
+        EnergyUtils.extractEnergy(ENERGY_STORAGE, Math.max(extractedEnergy, 1), false);
+    }
+
+    public void setMachineLevel(ItemStack itemStack, Player player) {
+        SetMachineLevel.setMachineLevel(itemStack, player, this, COMPONENT_SLOT, this.itemHandler);
+    }
+}

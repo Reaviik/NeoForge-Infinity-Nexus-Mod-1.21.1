@@ -1,0 +1,21 @@
+{
+  "type": "infinity_nexus_mod:pressing",
+  "energy": 19200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_5"
+    },
+    {
+      "item": "infinity_nexus_mod:brass_sheet",
+      "count": 1
+    },
+    {
+      "item": "infinity_nexus_mod:gold_wire_cast"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:brass_wire",
+    "count": 1
+  }
+}

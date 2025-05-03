@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=z":{ "model":  "infinity_nexus_mod:block/explorar_portal_ew"},
+    "axis=x":{ "model":  "infinity_nexus_mod:block/explorar_portal_ns"}
+  }
+}

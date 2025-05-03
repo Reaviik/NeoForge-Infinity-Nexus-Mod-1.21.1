@@ -1,0 +1,23 @@
+{
+  "type": "infinity_nexus_mod:melting",
+  "energy": 1200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_3",
+      "count": 1
+    },
+    {
+      "item": "infinity_nexus_mod:zinc_ingot",
+      "count": 1
+    },
+    {
+      "item": "minecraft:copper_ingot",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:brass_ingot",
+    "count": 3
+  }
+}

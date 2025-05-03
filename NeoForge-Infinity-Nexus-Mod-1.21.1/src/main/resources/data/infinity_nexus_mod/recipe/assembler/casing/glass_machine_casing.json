@@ -1,0 +1,38 @@
+{
+  "type": "infinity_nexus_mod:assembler",
+  "duration": 130,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_5"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "infinity_nexus_miner:rubium_crystal"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "tag": "infinity_nexus_mod:machine_tier_3"
+    },
+    {
+      "item": "minecraft:glass"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:glass_machine_casing",
+    "count": 1
+  }
+}

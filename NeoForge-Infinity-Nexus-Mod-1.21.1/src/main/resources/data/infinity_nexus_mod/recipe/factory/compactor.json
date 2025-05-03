@@ -1,0 +1,62 @@
+{
+  "type": "infinity_nexus_mod:factory",
+  "duration": 5520,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_8"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_machine_casing"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:observer"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_machine_casing"
+    },
+    {
+      "item": "infinity_nexus_mod:iridium_mesh"
+    },
+    {
+      "item": "infinity_nexus_mod:iridium_mesh"
+    },
+    {
+      "item": "minecraft:observer"
+    },
+    {
+      "item": "minecraft:observer"
+    },
+    {
+      "item": "infinity_nexus_mod:iridium_mesh"
+    },
+    {
+      "item": "infinity_nexus_mod:iridium_mesh"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_machine_casing"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:observer"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_machine_casing"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:compactor",
+    "count": 1
+  }
+}

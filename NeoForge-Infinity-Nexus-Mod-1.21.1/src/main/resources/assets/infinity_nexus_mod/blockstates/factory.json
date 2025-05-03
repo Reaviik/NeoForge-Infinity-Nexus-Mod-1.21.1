@@ -1,0 +1,8 @@
+{
+      "variants": {
+            "facing=north":{"model": "infinity_nexus_mod:block/factory"},
+            "facing=east":{"model": "infinity_nexus_mod:block/factory", "y": 90},
+            "facing=south":{"model": "infinity_nexus_mod:block/factory", "y": 180},
+            "facing=west":{"model": "infinity_nexus_mod:block/factory", "y": 270}
+      }
+}

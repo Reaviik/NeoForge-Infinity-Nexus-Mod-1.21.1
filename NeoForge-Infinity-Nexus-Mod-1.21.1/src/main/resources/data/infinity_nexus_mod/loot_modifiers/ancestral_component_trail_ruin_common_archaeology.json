@@ -1,0 +1,10 @@
+{
+  "type": "infinity_nexus_mod:add_sus_sand_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:archaeology/desert_pyramid"
+    }
+  ],
+  "item": "infinity_nexus_core:ancestral_component"
+}

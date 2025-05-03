@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "B": {
+      "item": "minecraft:observer"
+    },
+    "C": {
+      "item": "minecraft:calibrated_sculk_sensor"
+    },
+    "D": {
+      "item": "minecraft:repeater"
+    },
+    "E": {
+      "item": "minecraft:nether_star"
+    },
+    "F": {
+      "item": "minecraft:comparator"
+    },
+    "G": {
+      "item": "minecraft:redstone_block"
+    },
+    "H": {
+      "item": "minecraft:sticky_piston"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHG"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:voxel_n"
+  },
+  "show_notification": true
+}

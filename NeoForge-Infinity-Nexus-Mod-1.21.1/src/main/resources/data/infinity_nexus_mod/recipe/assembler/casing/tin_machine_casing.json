@@ -1,0 +1,38 @@
+{
+  "type": "infinity_nexus_mod:assembler",
+  "duration": 130,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_3"
+    },
+    {
+      "item": "infinity_nexus_mod:tin_rod"
+    },
+    {
+      "item": "infinity_nexus_miner:marine_crystal"
+    },
+    {
+      "item": "infinity_nexus_mod:tin_screw"
+    },
+    {
+      "item": "infinity_nexus_mod:tin_sheet"
+    },
+    {
+      "item": "infinity_nexus_mod:tin_sheet"
+    },
+    {
+      "item": "infinity_nexus_mod:tin_screw"
+    },
+    {
+      "tag": "infinity_nexus_mod:machine_tier_1"
+    },
+    {
+      "item": "infinity_nexus_mod:tin_rod"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:tin_machine_casing",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "infinity_nexus_mod:fermentation",
+  "duration": 310,
+  "fluidInput": {
+    "id": "minecraft:water",
+    "amount": 1000
+  },
+  "ingredients": [
+    {
+      "item": "infinity_nexus_mod:sliced_apple",
+      "count": 16
+    }
+  ],
+  "output":
+  {
+    "id": "infinity_nexus_mod:vinegar_bottle",
+    "count": 4
+  }
+}

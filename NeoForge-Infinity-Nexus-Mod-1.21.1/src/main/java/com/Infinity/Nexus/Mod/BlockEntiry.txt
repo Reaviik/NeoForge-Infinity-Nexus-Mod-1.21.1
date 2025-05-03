@@ -1,0 +1,9 @@
+1° - Um Bloco - Classe e Registro
+2° - Um BlockEntity
+3° - Registrar um BE
+4° - Registrar um MENU e uma SCREEN - setar a quantidade de slots e a posição, lembrar do tamanho do ContainerData
+5° - Registrar um MENU_TYPE
+6° - Registrar o MENU na Classe Principal
+7° - Registrar as Recipes caso exista
+8° - Ajustar a função tick do BlockEntity
+9° - Textura, Gui, Tradução, Datagen, etc.

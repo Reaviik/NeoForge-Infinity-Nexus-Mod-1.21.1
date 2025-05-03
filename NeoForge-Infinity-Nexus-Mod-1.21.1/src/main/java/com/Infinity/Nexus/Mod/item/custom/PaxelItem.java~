@@ -1,0 +1,83 @@
+package com.Infinity.Nexus.Mod.item.custom;
+
+import com.Infinity.Nexus.Mod.block.entity.ModDiggerItem;
+import com.Infinity.Nexus.Mod.item.ModItemsAdditions;
+import com.Infinity.Nexus.Mod.item.ModPaxelItem;
+import com.Infinity.Nexus.Mod.item.ModToolTiers;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.List;
+import java.util.Random;
+
+public class PaxelItem extends ModDiggerItem {
+    private final boolean drop;
+    private final Component translation;
+    private final MobEffectInstance[] effects = new MobEffectInstance[]{new MobEffectInstance(MobEffects.LUCK, 1, 1, false, false)};
+
+    public PaxelItem(ModToolTiers tier, Properties properties, Component translation, boolean drop) {
+        super(tier, properties);
+        this.translation = translation;
+        this.drop = drop;
+    }
+
+    @Override
+    public float getDestroySpeed(ItemStack stack, BlockState state) {
+        if (state.is(BlockTags.MINEABLE_WITH_PICKAXE) ||
+                state.is(BlockTags.MINEABLE_WITH_AXE) ||
+                state.is(BlockTags.MINEABLE_WITH_SHOVEL)) {
+            return 50.0F;
+        }
+        return super.getDestroySpeed(stack, state);
+    }
+
+    @Override
+    public boolean mineBlock(ItemStack stack, Level level, BlockState state, BlockPos pos, LivingEntity miningEntity) {
+        if(drop){
+            ItemEntity itemEntity = new ItemEntity(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, ModItemsAdditions.INFINITY_NUGGET.get().getDefaultInstance());
+            Random random = new Random();
+            int randomInt = random.nextInt(10000) + 1;
+            if(randomInt <= 1){
+                level.addFreshEntity(itemEntity);
+            }
+        }
+        return super.mineBlock(stack, level, state, pos, miningEntity);
+    }
+
+
+
+    @Override
+    public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
+        for (MobEffectInstance effect : effects) {
+            pTarget.addEffect(new MobEffectInstance(effect.getEffect(), effect.getDuration()), pAttacker);
+        }
+        return super.hurtEnemy(pStack, pTarget, pAttacker);
+    }
+
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        if (Screen.hasShiftDown()) {
+            tooltipComponents.add(translation);
+        } else {
+            tooltipComponents.add(Component.translatable("tooltip.infinity_nexus.pressShift"));
+        }
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+    }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
+}

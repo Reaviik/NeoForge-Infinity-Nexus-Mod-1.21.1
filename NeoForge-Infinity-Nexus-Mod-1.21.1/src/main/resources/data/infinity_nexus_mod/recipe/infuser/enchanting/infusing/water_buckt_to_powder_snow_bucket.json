@@ -1,0 +1,14 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "minecraft:powder_snow_bucket",
+    "count": 1
+  },
+  "pedestals": [1,2,3,4,5,6]
+}

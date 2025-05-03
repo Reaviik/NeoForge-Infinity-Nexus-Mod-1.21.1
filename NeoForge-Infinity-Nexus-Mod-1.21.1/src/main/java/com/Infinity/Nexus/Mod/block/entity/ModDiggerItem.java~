@@ -1,0 +1,30 @@
+package com.Infinity.Nexus.Mod.block.entity;
+
+import com.Infinity.Nexus.Mod.item.ModToolTiers;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.DiggerItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.component.Unbreakable;
+import net.minecraft.world.level.block.Block;
+
+public class ModDiggerItem extends DiggerItem {
+    public ModDiggerItem(ModToolTiers tier, TagKey<Block> blocks, Item.Properties properties) {
+        super(tier, blocks, adjustProperties(tier, properties));
+    }
+    public ModDiggerItem(ModToolTiers tier, Item.Properties properties) {
+        super(tier, tier.getIncorrectBlocksForDrops(), adjustProperties(tier, properties));
+    }
+
+
+    private static Item.Properties adjustProperties(Tier tier, Item.Properties properties) {
+        var uses = tier.getUses();
+        if (uses == 0) {
+            properties.component(DataComponents.UNBREAKABLE, new Unbreakable(true));
+        } else {
+            properties.durability(uses);
+        }
+        return properties;
+    }
+}

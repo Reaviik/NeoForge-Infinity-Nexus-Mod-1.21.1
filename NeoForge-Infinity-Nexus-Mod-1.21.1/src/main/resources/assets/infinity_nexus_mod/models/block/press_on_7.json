@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "infinity_nexus_mod:block/base_machines/machine_bottom_0",
+    "front": "infinity_nexus_mod:block/press/press_front_on_7",
+    "side": "infinity_nexus_mod:block/base_machines/machine_side_7",
+    "top": "infinity_nexus_mod:block/press/press_top_0"
+  }
+}

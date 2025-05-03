@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "tconstruct:seared_stone",
+    "tconstruct:seared_brick",
+    "tconstruct:seared_glass",
+    "tconstruct:seared_fuel_tank",
+    "tconstruct:seared_drain",
+    "tconstruct:seared_faucet",
+    "tconstruct:seared_basin",
+    "tconstruct:seared_table",
+    "tconstruct:seared_smeltery_controller"
+  ]
+}

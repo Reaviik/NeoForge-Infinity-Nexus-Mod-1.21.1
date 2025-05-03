@@ -1,0 +1,13 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:grass_block"
+    }
+  ],
+  "output": {
+    "id": "minecraft:clay",
+    "count": 1
+  },
+  "pedestals": [2,3,6]
+}

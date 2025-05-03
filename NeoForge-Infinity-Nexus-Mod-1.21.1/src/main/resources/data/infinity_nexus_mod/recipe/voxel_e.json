@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "B": {
+      "item": "minecraft:mangrove_propagule"
+    },
+    "C": {
+      "item": "minecraft:spyglass"
+    },
+    "D": {
+      "item": "minecraft:compass"
+    },
+    "E": {
+      "item": "minecraft:nether_star"
+    },
+    "F": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "G": {
+      "item": "minecraft:cobweb"
+    },
+    "H": {
+      "item": "minecraft:netherite_upgrade_smithing_template"
+    },
+    "I": {
+      "item": "minecraft:sponge"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:voxel_e"
+  },
+  "show_notification": true
+}

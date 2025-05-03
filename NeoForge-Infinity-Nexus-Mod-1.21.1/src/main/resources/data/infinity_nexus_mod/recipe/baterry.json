@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    "B": {
+      "tag": "c:plates/lead"
+    },
+    "C": {
+      "tag": "c:wires/gold"
+    },
+    "D": {
+      "item": "infinity_nexus_mod:basic_circuit"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CDC",
+    "ABA"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:battery",
+    "count": 1
+  }
+}

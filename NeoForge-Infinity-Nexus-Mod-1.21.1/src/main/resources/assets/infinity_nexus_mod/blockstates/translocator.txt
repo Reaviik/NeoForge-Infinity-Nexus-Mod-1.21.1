@@ -1,0 +1,121 @@
+
+    protected static final VoxelShape CEILING_AABB  = Stream.of(
+            Shapes.box(0.25, 0.9375, 0.25, 0.75, 1, 0.75),
+            Shapes.box(0.375, 0.5625, 0.375, 0.625, 0.9375, 0.625),
+            Shapes.box(0.46875, 0.3125, 0.46875, 0.53125, 0.5625, 0.53125),
+            Shapes.box(0.4375, 0.21875, 0.4375, 0.5625, 0.34375, 0.5625),
+            Shapes.box(0.453125, 0.234375, 0.453125, 0.546875, 0.328125, 0.546875)
+    ).reduce(Shapes.empty(), (a, b) -> Shapes.join(a, b, BooleanOp.OR));
+    protected static final VoxelShape FLOOR_AABB = Stream.of(
+            Shapes.box(0.25, 0, 0.25, 0.75, 0.0625, 0.75),
+            Shapes.box(0.375, 0.0625, 0.375, 0.625, 0.4375, 0.625),
+            Shapes.box(0.46875, 0.4375, 0.46875, 0.53125, 0.6875, 0.53125),
+            Shapes.box(0.4375, 0.65625, 0.4375, 0.5625, 0.78125, 0.5625),
+            Shapes.box(0.453125, 0.671875, 0.453125, 0.546875, 0.765625, 0.546875)
+    ).reduce(Shapes.empty(), (a, b) -> Shapes.join(a, b, BooleanOp.OR));
+    protected static final VoxelShape NORTH_AABB =  Stream.of(
+            Shapes.box(0.25, 0.25, 0.9375, 0.75, 0.75, 1),
+            Shapes.box(0.375, 0.375, 0.5625, 0.625, 0.625, 0.9375),
+            Shapes.box(0.46875, 0.46875, 0.3125, 0.53125, 0.53125, 0.5625),
+            Shapes.box(0.4375, 0.4375, 0.21875, 0.5625, 0.5625, 0.34375),
+            Shapes.box(0.453125, 0.453125, 0.234375, 0.546875, 0.546875, 0.328125)
+    ).reduce(Shapes.empty(), (a, b) -> Shapes.join(a, b, BooleanOp.OR));
+    protected static final VoxelShape SOUTH_AABB = Stream.of(
+            Shapes.box(0.25, 0.25, 0, 0.75, 0.75, 0.0625),
+            Shapes.box(0.375, 0.375, 0.0625, 0.625, 0.625, 0.4375),
+            Shapes.box(0.46875, 0.46875, 0.4375, 0.53125, 0.53125, 0.6875),
+            Shapes.box(0.4375, 0.4375, 0.65625, 0.5625, 0.5625, 0.78125),
+            Shapes.box(0.453125, 0.453125, 0.671875, 0.546875, 0.546875, 0.765625)
+    ).reduce(Shapes.empty(), (a, b) -> Shapes.join(a, b, BooleanOp.OR));
+    protected static final VoxelShape WEST_AABB = Stream.of(
+            Shapes.box(0.9375, 0.25, 0.25, 1, 0.75, 0.75),
+            Shapes.box(0.5625, 0.375, 0.375, 0.9375, 0.625, 0.625),
+            Shapes.box(0.3125, 0.46875, 0.46875, 0.5625, 0.53125, 0.53125),
+            Shapes.box(0.21875, 0.4375, 0.4375, 0.34375, 0.5625, 0.5625),
+            Shapes.box(0.234375, 0.453125, 0.453125, 0.328125, 0.546875, 0.546875)
+    ).reduce(Shapes.empty(), (a, b) -> Shapes.join(a, b, BooleanOp.OR));
+    protected static final VoxelShape EAST_AABB = Stream.of(
+            Shapes.box(0, 0.25, 0.25, 0.0625, 0.75, 0.75),
+            Shapes.box(0.0625, 0.375, 0.375, 0.4375, 0.625, 0.625),
+            Shapes.box(0.4375, 0.46875, 0.46875, 0.6875, 0.53125, 0.53125),
+            Shapes.box(0.65625, 0.4375, 0.4375, 0.78125, 0.5625, 0.5625),
+            Shapes.box(0.671875, 0.453125, 0.453125, 0.765625, 0.546875, 0.546875)
+    ).reduce(Shapes.empty(), (a, b) -> Shapes.join(a, b, BooleanOp.OR));
+
+{
+
+  "variants": {
+    "face=floor,facing=north,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=south,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=east,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=west,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=north,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=north,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=north,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=east,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=south,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=south,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=east,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=north,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=south,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=east,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=south,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=east,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=north,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=east,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=north,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=east,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=north,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=east,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=north,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=south,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=west,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=south,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=south,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=west,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=north,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=south,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=north,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=south,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=north,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=west,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=west,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=west,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=wall,facing=west,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=south,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=south,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=west,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=west,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=west,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=west,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=east,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=east,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=east,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=east,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=east,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=east,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=east,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=east,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=east,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=east,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=west,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=west,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=south,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=west,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=south,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=south,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=south,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=north,lit=4": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=south,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=north,lit=5": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=south,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=north,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=north,lit=3": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=north,lit=0": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=north,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=west,lit=2": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=floor,facing=west,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=west,lit=1": {"model": "infinity_nexus_mod:block/translocator" },
+    "face=ceiling,facing=west,lit=0": {"model": "infinity_nexus_mod:block/translocator" }
+  }
+}

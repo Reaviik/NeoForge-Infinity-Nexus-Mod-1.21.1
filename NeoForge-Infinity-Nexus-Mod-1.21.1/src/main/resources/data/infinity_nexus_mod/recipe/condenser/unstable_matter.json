@@ -1,0 +1,17 @@
+{
+  "type": "infinity_nexus_mod:condensing",
+  "energy": 26843545,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_1"
+    },
+    {
+      "item": "infinity_nexus_mod:residual_matter",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:unstable_matter",
+    "count": 1
+  }
+}

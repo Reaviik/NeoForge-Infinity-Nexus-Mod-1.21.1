@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinity_nexus_mod:uranium_ingot_from_smelting_uranium_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uranium_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infinity_nexus_mod:uranium_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_uranium_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinity_nexus_mod:uranium_ingot_from_smelting_uranium_dust"
+    ]
+  }
+}

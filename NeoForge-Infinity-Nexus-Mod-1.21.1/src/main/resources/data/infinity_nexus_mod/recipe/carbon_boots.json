@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    "$": {
+      "item": "minecraft:netherite_boots"
+    }
+  },
+  "pattern": [
+    "# #",
+    "#$#"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:carbon_boots"
+  },
+  "show_notification": true
+}

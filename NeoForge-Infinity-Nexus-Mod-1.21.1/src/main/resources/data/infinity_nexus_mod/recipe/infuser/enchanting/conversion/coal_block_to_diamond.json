@@ -1,0 +1,14 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:coal_block",
+      "count": 3
+    }
+  ],
+  "output": {
+    "id": "minecraft:diamond",
+    "count": 1
+  },
+  "pedestals": [1,2,3,4,5,6]
+}

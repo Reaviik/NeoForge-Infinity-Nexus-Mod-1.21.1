@@ -1,0 +1,25 @@
+{
+  "type": "infinity_nexus_mod:crushing",
+  "energy": 2400,
+  "duration": 130,
+  "can_duplicate": false,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_2"
+    },
+    {
+      "item": "powah:deepslate_uraninite_ore",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "powah:uraninite_raw",
+    "count": 3
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "powah"
+    }
+  ]
+}

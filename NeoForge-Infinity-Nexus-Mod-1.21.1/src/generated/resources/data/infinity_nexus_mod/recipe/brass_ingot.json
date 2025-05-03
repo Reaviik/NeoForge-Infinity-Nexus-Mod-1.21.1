@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "infinity_nexus_mod:brass_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "infinity_nexus_mod:brass_ingot"
+  }
+}

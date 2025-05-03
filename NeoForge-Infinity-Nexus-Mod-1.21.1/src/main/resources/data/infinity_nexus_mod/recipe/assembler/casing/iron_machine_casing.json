@@ -1,0 +1,38 @@
+{
+  "type": "infinity_nexus_mod:assembler",
+  "duration": 130,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_2"
+    },
+    {
+      "item": "infinity_nexus_mod:iron_rod"
+    },
+    {
+      "item": "infinity_nexus_miner:amber_crystal"
+    },
+    {
+      "item": "infinity_nexus_mod:iron_screw"
+    },
+    {
+      "item": "infinity_nexus_mod:iron_sheet"
+    },
+    {
+      "item": "infinity_nexus_mod:iron_sheet"
+    },
+    {
+      "item": "infinity_nexus_mod:iron_screw"
+    },
+    {
+      "tag": "infinity_nexus_mod:machine_tier_2"
+    },
+    {
+      "item": "infinity_nexus_mod:iron_rod"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_miner:iron_structure",
+    "count": 1
+  }
+}

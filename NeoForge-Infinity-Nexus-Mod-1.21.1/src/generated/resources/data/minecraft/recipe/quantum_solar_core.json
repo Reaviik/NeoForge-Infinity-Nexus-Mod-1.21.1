@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinity_nexus_miner:termurium_crystal"
+    },
+    "B": {
+      "item": "infinity_nexus_mod:advanced_solar_core"
+    },
+    "C": {
+      "item": "infinity_nexus_core:infinity_component"
+    },
+    "D": {
+      "item": "infinity_nexus_mod:iridium"
+    },
+    "E": {
+      "item": "infinity_nexus_mod:stable_matter"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "BCB",
+    "EDE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:quantum_solar_core"
+  }
+}
