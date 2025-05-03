@@ -1,0 +1,38 @@
+{
+  "type": "infinity_nexus_mod:assembler",
+  "duration": 130,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_6"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "infinity_nexus_miner:demetrium_crystal"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "tag": "infinity_nexus_mod:machine_tier_4"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:plastic_machine_casing",
+    "count": 1
+  }
+}

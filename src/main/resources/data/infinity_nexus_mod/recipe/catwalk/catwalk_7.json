@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "infinity_nexus_mod:catwalk_6"
+    }
+  },
+  "pattern": [
+    "@"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:catwalk_7",
+    "count": 1
+  },
+  "show_notification": true
+}

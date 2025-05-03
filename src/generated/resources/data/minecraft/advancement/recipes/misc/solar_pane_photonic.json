@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_solar_pane_photonic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infinity_nexus_mod:solar_pane_photonic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:solar_pane_photonic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_solar_pane_photonic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:solar_pane_photonic"
+    ]
+  }
+}

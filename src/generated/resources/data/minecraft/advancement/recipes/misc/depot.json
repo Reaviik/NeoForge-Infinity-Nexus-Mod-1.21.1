@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_depot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infinity_nexus_mod:depot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:depot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_depot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:depot"
+    ]
+  }
+}

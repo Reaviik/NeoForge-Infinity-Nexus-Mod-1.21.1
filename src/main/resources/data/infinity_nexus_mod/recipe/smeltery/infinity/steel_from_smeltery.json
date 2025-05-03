@@ -1,0 +1,23 @@
+{
+  "type": "infinity_nexus_mod:melting",
+  "energy": 1200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_3",
+      "count": 1
+    },
+    {
+      "tag": "minecraft:coals",
+      "count": 2
+    },
+    {
+      "tag": "c:ingots/iron",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:steel_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "infinity_nexus_mod:melting",
+  "energy": 1200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_2",
+      "count": 1
+    },
+    {
+      "item": "infinity_nexus_mod:silver_ingot",
+      "count": 1
+    },
+    {
+      "item": "minecraft:gold_ingot",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "thermal:electrum_ingot",
+    "count": 2
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thermal"
+    }
+  ]
+}

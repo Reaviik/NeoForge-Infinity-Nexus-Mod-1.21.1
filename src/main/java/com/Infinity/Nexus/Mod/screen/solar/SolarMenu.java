@@ -1,0 +1,54 @@
+package com.Infinity.Nexus.Mod.screen.solar;
+
+import com.Infinity.Nexus.Core.itemStackHandler.RestrictedItemStackHandler;
+import com.Infinity.Nexus.Core.screen.BaseAbstractContainerMenu;
+import com.Infinity.Nexus.Mod.block.ModBlocksAdditions;
+import com.Infinity.Nexus.Mod.block.entity.SolarBlockEntity;
+import com.Infinity.Nexus.Mod.screen.ModMenuTypes;
+import com.Infinity.Nexus.Mod.slots.SolarComponentSlot;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.SimpleContainerData;
+import net.minecraft.world.level.Level;
+
+public class SolarMenu extends BaseAbstractContainerMenu {
+    public final SolarBlockEntity blockEntity;
+    private final Level level;
+    private final ContainerData data;
+    private static final int slots = 1;
+
+    public SolarMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
+        this(pContainerId, inv, (SolarBlockEntity) inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2), new RestrictedItemStackHandler(slots));
+    }
+
+    public SolarMenu(int pContainerId, Inventory inv, SolarBlockEntity entity, ContainerData data, RestrictedItemStackHandler iItemHandler) {
+        super(ModMenuTypes.SOLAR_MENU.get(), pContainerId, slots);
+        checkContainerSize(inv, slots);
+        blockEntity = entity;
+        this.level = inv.player.level();
+        this.data = data;
+
+        addPlayerInventory(inv);
+        addPlayerHotbar(inv);
+
+        this.addSlot(new SolarComponentSlot(iItemHandler, 0, 80, 45));
+
+        addDataSlots(data);
+    }
+
+    public boolean isCrafting() {
+        return data.get(0) > 0;
+    }
+    public SolarBlockEntity getBlockEntity() {
+        return blockEntity;
+    }
+
+    @Override
+    public boolean stillValid(Player pPlayer) {
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
+                pPlayer, ModBlocksAdditions.SOLAR.get());
+    }
+}

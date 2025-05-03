@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "#": {
+      "item": "minecraft:iron_nugget"
+    },
+    "$": {
+      "item": "minecraft:light_gray_concrete"
+    }
+  },
+  "pattern": [
+    "@#$",
+    "#$ ",
+    "$  "
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:catwalk_11",
+    "count": 4
+  },
+  "show_notification": true
+}

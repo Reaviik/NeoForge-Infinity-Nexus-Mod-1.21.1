@@ -1,0 +1,10 @@
+{
+      "variants": {
+            "lit=0":{"model": "infinity_nexus_mod:block/solar"},
+            "lit=1":{"model": "infinity_nexus_mod:block/solar_0"},
+            "lit=2":{"model": "infinity_nexus_mod:block/solar_1"},
+            "lit=3":{"model": "infinity_nexus_mod:block/solar_2"},
+            "lit=4":{"model": "infinity_nexus_mod:block/solar_3"},
+            "lit=5":{"model": "infinity_nexus_mod:block/solar_4"}
+      }
+}

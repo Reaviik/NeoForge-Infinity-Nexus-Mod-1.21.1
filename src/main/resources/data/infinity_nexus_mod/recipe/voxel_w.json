@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "B": {
+      "item": "minecraft:ender_eye"
+    },
+    "C": {
+      "item": "minecraft:experience_bottle"
+    },
+    "D": {
+      "item": "minecraft:dragon_egg"
+    },
+    "E": {
+      "item": "minecraft:nether_star"
+    },
+    "F": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "G": {
+      "item": "minecraft:end_crystal"
+    },
+    "H": {
+      "item": "minecraft:enchanting_table"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHG"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:voxel_w"
+  },
+  "show_notification": true
+}

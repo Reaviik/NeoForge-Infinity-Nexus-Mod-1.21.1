@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "$": {
+      "item": "infinity_nexus_mod:steel_sheet"
+    }
+  },
+  "pattern": [
+    "$# ",
+    "#  ",
+    "   "
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:knife"
+  },
+  "show_notification": true
+}

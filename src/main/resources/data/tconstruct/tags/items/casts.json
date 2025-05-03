@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "infinity_nexus_mod:gold_wire_cast",
+    "infinity_nexus_mod:gold_screw_cast",
+    "infinity_nexus_mod:gold_sheet_cast",
+    "infinity_nexus_mod:gold_ingot_cast",
+    "infinity_nexus_mod:gold_rod_cast"
+  ]
+}

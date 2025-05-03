@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:dispenser"
+    },
+    "B": {
+      "item": "minecraft:iron_bars"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "D": {
+      "item": "infinity_nexus_miner:wood_structure"
+    },
+    "E": {
+      "item": "infinity_nexus_mod:basic_circuit"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CDC",
+    " E "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:placer"
+  }
+}

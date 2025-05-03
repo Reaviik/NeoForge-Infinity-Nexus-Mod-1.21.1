@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "infinity_nexus_mod:knife"
+    }
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:sliced_apple",
+    "count": 4
+  }
+}

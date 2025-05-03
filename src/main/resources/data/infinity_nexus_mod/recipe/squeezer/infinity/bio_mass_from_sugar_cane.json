@@ -1,0 +1,22 @@
+{
+  "type": "infinity_nexus_mod:squeezing",
+  "energy": 1200,
+  "duration": 130,
+  "fluidType": {
+    "id": "infinity_nexus_mod:sugarcane_juice_water_fluid",
+    "amount": 15
+  },
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_3"
+    },
+    {
+      "item": "minecraft:sugar_cane",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:bio_mass",
+    "count": 2
+  }
+}

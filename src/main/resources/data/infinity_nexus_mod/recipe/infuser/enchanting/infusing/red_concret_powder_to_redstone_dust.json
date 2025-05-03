@@ -1,0 +1,13 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:red_concrete_powder"
+    }
+  ],
+  "output": {
+    "id": "minecraft:redstone",
+    "count": 2
+  },
+  "pedestals": [1,2,3,4,5,6]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "infinity_nexus_mod:pressing",
+  "energy": 19200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_2"
+    },
+    {
+      "item": "infinity_nexus_mod:graphite_dust",
+      "count": 8
+    },
+    {
+      "item": "infinity_nexus_mod:gold_sheet_cast"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:carbon_plate",
+    "count": 1
+  }
+}

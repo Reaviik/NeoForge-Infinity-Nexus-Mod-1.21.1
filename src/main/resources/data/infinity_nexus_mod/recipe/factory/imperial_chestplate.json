@@ -1,0 +1,62 @@
+{
+  "type": "infinity_nexus_mod:factory",
+  "duration": 520,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_9"
+    },
+    {
+      "item": "infinity_nexus_mod:infinium_stellarum_ingot"
+    },
+    {
+      "item": "infinity_nexus_mod:infinium_stellarum_ingot"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_chestplate"
+    },
+    {
+      "item": "infinity_nexus_mod:infinium_stellarum_ingot"
+    },
+    {
+      "item": "infinity_nexus_mod:infinium_stellarum_ingot"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    {
+      "item": "infinity_nexus_mod:infinium_stellarum_ingot"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    {
+      "item": "infinity_nexus_mod:infinium_stellarum_ingot"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    {
+      "item": "infinity_nexus_mod:infinium_stellarum_ingot"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:imperial_infinity_chestplate",
+    "count": 1
+  }
+}

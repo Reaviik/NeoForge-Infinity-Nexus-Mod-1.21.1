@@ -1,0 +1,25 @@
+{
+  "type": "infinity_nexus_mod:crushing",
+  "energy": 3600,
+  "duration": 130,
+  "can_duplicate": false,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_3"
+    },
+    {
+      "item": "mysticalagriculture:nether_inferium_ore",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "mysticalagriculture:inferium_essence",
+    "count": 8
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mysticalagriculture"
+    }
+  ]
+}

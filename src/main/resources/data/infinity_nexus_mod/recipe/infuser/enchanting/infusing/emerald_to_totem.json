@@ -1,0 +1,14 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:emerald",
+      "count": 16
+    }
+  ],
+  "output": {
+    "id": "minecraft:totem_of_undying",
+    "count": 1
+  },
+  "pedestals": [1,2,3,4,5,6]
+}

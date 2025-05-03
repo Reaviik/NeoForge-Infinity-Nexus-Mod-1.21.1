@@ -1,0 +1,62 @@
+{
+  "type": "infinity_nexus_mod:factory",
+  "duration": 600,
+  "energy": 1000000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_8"
+    },
+    {
+      "item": "infinity_nexus_mod:industrial_rod"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_miner:purple_clear_glass"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:industrial_rod"
+    },
+    {
+      "item": "infinity_nexus_miner:yellow_clear_glass"
+    },
+    {
+      "item": "infinity_nexus_miner:white_clear_glass"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_miner:blue_clear_glass"
+    },
+    {
+      "item": "infinity_nexus_miner:orange_clear_glass"
+    },
+    {
+      "item": "minecraft:copper_block"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_miner:green_clear_glass"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "minecraft:copper_block"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:infuser",
+    "count": 1
+  }
+}

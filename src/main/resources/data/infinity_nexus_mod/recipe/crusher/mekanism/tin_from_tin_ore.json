@@ -1,0 +1,25 @@
+{
+  "type": "infinity_nexus_mod:crushing",
+  "energy": 1200,
+  "duration": 130,
+  "can_duplicate": true,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_1"
+    },
+    {
+      "item": "mekanism:tin_ore",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:tin_dust",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}

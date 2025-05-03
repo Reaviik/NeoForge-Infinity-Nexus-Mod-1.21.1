@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:pointed_dripstone"
+    },
+    "B": {
+      "item": "minecraft:grindstone"
+    },
+    "C": {
+      "item": "infinity_nexus_mod:steel_machine_casing"
+    },
+    "D": {
+      "item": "minecraft:iron_ingot"
+    },
+    "E": {
+      "item": "infinity_nexus_mod:advanced_circuit"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "BCB",
+    "DED"
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:recycler"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "$": {
+      "item": "infinity_nexus_mod:iridium"
+    },
+    "#": {
+      "item": "infinity_nexus_mod:stable_matter"
+    }
+  },
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:infinity_ore",
+    "count": 2
+  },
+  "show_notification": true
+}

@@ -1,0 +1,8 @@
+{
+      "variants": {
+            "facing=north":{"model": "infinity_nexus_mod:block/voxel_cube"},
+            "facing=east":{"model": "infinity_nexus_mod:block/voxel_cube", "y": 90},
+            "facing=south":{"model": "infinity_nexus_mod:block/voxel_cube", "y": 180},
+            "facing=west":{"model": "infinity_nexus_mod:block/voxel_cube", "y": 270}
+      }
+}

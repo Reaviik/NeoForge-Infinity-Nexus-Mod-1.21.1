@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    "$": {
+      "item": "minecraft:ender_eye"
+    },
+    "@": {
+      "item": "minecraft:redstone_block"
+    },
+    "!": {
+      "item": "minecraft:lightning_rod"
+    }
+  },
+  "pattern": [
+    " $ ",
+    " ! ",
+    "#@#"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:translocator_energy",
+    "count": 2
+  }
+}

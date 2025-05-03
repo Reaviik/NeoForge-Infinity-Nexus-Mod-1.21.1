@@ -1,0 +1,206 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "misc.idle": {
+      "loop": true,
+      "animation_length": 5,
+      "bones": {
+        "rightWing": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0]
+            },
+            "2.5": {
+              "vector": [0, 0, -22.5]
+            },
+            "5.0": {
+              "vector": [0, 0, 0]
+            }
+          }
+        },
+        "Feather3": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, 5.1]
+            },
+            "5.0": {
+              "vector": [0, 0, 0.1]
+            }
+          }
+        },
+        "Feather1": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, -14.9]
+            },
+            "5.0": {
+              "vector": [0, 0, 0.1]
+            }
+          }
+        },
+        "Feather4": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, -10]
+            },
+            "5.0": {
+              "vector": [0, 0, 0.1]
+            }
+          }
+        },
+        "Feather2": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, 5.1]
+            },
+            "5.0": {
+              "vector": [0, 0, 0.1]
+            }
+          }
+        },
+        "Feather0": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, -37.4]
+            },
+            "5.0": {
+              "vector": [0, 0, 0.1]
+            }
+          }
+        },
+        "Intersection": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "5.0": {
+              "vector": [0, 0, 90]
+            }
+          }
+        },
+        "Bone1": {
+          "rotation": {
+            "vector": [0, 0, 0]
+          }
+        },
+        "leftWing": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0]
+            },
+            "2.5": {
+              "vector": [0, 0, 22.5]
+            },
+            "5.0": {
+              "vector": [0, 0, 0.1]
+            }
+          }
+        },
+        "Center": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, -90]
+            },
+            "5.0": {
+              "vector": [0, 0, -180]
+            }
+          }
+        },
+        "Fether4": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, 10]
+            },
+            "5.0": {
+              "vector": [0, 0, -0.1]
+            }
+          }
+        },
+        "Fether0": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, -5.1]
+            },
+            "5.0": {
+              "vector": [0, 0, -0.1]
+            }
+          }
+        },
+        "Fether1": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, -5.1]
+            },
+            "5.0": {
+              "vector": [0, 0, -0.1]
+            }
+          }
+        },
+        "Fether2": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, 14.9]
+            },
+            "5.0": {
+              "vector": [0, 0, -0.1]
+            }
+          }
+        },
+        "Fether3": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, 0.1]
+            },
+            "2.5": {
+              "vector": [0, 0, 37.4]
+            },
+            "5.0": {
+              "vector": [0, 0, -0.1]
+            }
+          }
+        },
+        "Intersection2": {
+          "rotation": {
+            "0.0": {
+              "vector": [0, 0, -0.1]
+            },
+            "5.0": {
+              "vector": [0, 0, -90]
+            }
+          }
+        }
+      }
+    }
+  },
+  "geckolib_format_version": 2
+}

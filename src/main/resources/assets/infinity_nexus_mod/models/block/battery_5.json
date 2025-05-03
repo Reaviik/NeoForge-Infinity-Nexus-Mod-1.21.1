@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "infinity_nexus_mod:block/battery/battery_bottom",
+    "front": "infinity_nexus_mod:block/battery/battery_side_5",
+    "side": "infinity_nexus_mod:block/battery/battery_side_5",
+    "top": "infinity_nexus_mod:block/battery/battery_top"
+  }
+}

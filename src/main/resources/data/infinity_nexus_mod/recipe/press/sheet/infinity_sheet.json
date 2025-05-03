@@ -1,0 +1,21 @@
+{
+  "type": "infinity_nexus_mod:pressing",
+  "energy": 72800,
+  "duration": 260,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_7"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_ingot",
+      "count": 1
+    },
+    {
+      "item": "infinity_nexus_mod:gold_sheet_cast"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:infinity_sheet",
+    "count": 1
+  }
+}

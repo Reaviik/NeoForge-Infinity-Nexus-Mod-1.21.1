@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_raw_infinity": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "infinity_nexus_mod:raw_infinity"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "infinity_nexus_mod:textures/block/infinity_singularity.png",
+    "description": {
+      "text": "The start of Infinity!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "infinity_nexus_mod:infinity_singularity"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Infinity Nexus Mod"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_infinity"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

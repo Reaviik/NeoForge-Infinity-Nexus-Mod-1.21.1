@@ -1,0 +1,25 @@
+{
+  "type": "infinity_nexus_mod:crushing",
+  "energy": 4800,
+  "duration": 130,
+  "can_duplicate": true,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_4"
+    },
+    {
+      "item": "occultism:silver_ore_deepslate",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:silver_dust",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "occultism"
+    }
+  ]
+}

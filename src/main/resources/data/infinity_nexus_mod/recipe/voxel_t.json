@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:brewing_stand"
+    },
+    "B": {
+      "item": "minecraft:daylight_detector"
+    },
+    "C": {
+      "item": "minecraft:dragon_breath"
+    },
+    "D": {
+      "item": "minecraft:firework_star"
+    },
+    "E": {
+      "item": "minecraft:nether_star"
+    },
+    "F": {
+      "item": "minecraft:jack_o_lantern"
+    },
+    "G": {
+      "item": "minecraft:respawn_anchor"
+    },
+    "H": {
+      "item": "minecraft:beacon"
+    },
+    "I": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:voxel_t"
+  },
+  "show_notification": true
+}

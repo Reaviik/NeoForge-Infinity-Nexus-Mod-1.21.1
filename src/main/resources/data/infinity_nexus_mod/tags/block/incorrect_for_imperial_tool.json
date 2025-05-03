@@ -1,0 +1,8 @@
+{
+  "values": [
+    "#minecraft:incorrect_for_netherite_tool"
+  ],
+  "remove": [
+    "#infinity_nexus_mod:needs_imperial_tool"
+  ]
+}

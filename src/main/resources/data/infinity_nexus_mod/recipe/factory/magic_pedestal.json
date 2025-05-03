@@ -1,0 +1,62 @@
+{
+  "type": "infinity_nexus_mod:factory",
+  "duration": 600,
+  "energy": 1000000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_8"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:industrial_rod"
+    },
+    {
+      "item": "infinity_nexus_mod:voxel_w"
+    },
+    {
+      "item": "infinity_nexus_mod:industrial_rod"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_wire"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_wire"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:display"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    {
+      "item": "infinity_nexus_mod:carbon_plate"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:magic_pedestal",
+    "count": 1
+  }
+}

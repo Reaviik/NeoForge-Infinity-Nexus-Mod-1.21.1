@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_alcohol": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infinity_nexus_mod:alcohol_bottle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinity_nexus_mod:glycerin"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_alcohol"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinity_nexus_mod:glycerin"
+    ]
+  }
+}

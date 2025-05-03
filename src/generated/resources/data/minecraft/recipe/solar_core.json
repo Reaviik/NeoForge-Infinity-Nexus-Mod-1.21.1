@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinity_nexus_miner:demetrium_crystal"
+    },
+    "B": {
+      "item": "infinity_nexus_mod:advanced_circuit"
+    },
+    "C": {
+      "item": "infinity_nexus_core:logic_component"
+    },
+    "D": {
+      "item": "infinity_nexus_mod:stable_matter"
+    },
+    "E": {
+      "item": "infinity_nexus_mod:infinity_nugget"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "BCB",
+    "EDE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:solar_core"
+  }
+}

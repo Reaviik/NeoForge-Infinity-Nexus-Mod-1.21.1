@@ -1,0 +1,29 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "minecraft:writable_book",
+      "components": {
+        "minecraft:writable_book_content": {
+          "pages": [
+            { "raw": "protection" }
+          ]
+        }
+      }
+    }
+  ],
+  "output": {
+    "type": "neoforge:components",
+    "id": "minecraft:enchanted_book",
+    "count": 1,
+    "components": {
+      "minecraft:stored_enchantments": {
+        "levels": {
+          "minecraft:protection": 1
+        }
+      }
+    }
+  },
+  "pedestals": [1, 2, 3, 4, 5, 6]
+}

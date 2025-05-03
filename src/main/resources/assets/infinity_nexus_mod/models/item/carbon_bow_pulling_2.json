@@ -1,0 +1,6 @@
+{
+  "parent": "infinity_nexus_mod:item/infinity_bow",
+  "textures": {
+    "layer0": "infinity_nexus_mod:item/carbon_bow_pulling_2"
+  }
+}

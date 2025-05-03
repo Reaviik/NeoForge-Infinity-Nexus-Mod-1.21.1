@@ -1,0 +1,14 @@
+{
+  "type": "infinity_nexus_mod:infuser",
+  "ingredients": [
+    {
+      "item": "infinity_nexus_mod:star_fragment",
+      "count": 2
+    }
+  ],
+  "output": {
+    "id": "minecraft:nether_star",
+    "count": 1
+  },
+  "pedestals": [1,2,3,4,5,6]
+}

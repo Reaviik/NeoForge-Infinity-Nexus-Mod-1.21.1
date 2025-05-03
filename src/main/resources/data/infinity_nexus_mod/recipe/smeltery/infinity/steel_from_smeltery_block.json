@@ -1,0 +1,23 @@
+{
+  "type": "infinity_nexus_mod:melting",
+  "energy": 1200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_5",
+      "count": 1
+    },
+    {
+      "item": "minecraft:iron_block",
+      "count": 1
+    },
+    {
+      "item": "minecraft:coal_block",
+      "count": 2
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:steel_block",
+    "count": 1
+  }
+}

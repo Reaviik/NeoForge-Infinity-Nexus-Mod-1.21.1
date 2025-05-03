@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "A": {
+      "item": "minecraft:white_concrete"
+    },
+    "B": {
+      "item": "infinity_nexus_mod:infinity_dust"
+    }
+  },
+  "pattern": [
+    "A#A",
+    "#B#",
+    "A#A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:explorar_portal_frame"
+  }
+}

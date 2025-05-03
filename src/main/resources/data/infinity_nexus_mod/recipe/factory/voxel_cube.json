@@ -1,0 +1,62 @@
+{
+  "type": "infinity_nexus_mod:factory",
+  "duration": 15200,
+  "energy": 1000,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_9"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "infinity_nexus_mod:voxel_t"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "infinity_nexus_mod:voxel_n"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "infinity_nexus_mod:voxel_w"
+    },
+    {
+      "item": "infinity_nexus_mod:voxel_e"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "infinity_nexus_mod:voxel_d"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "infinity_nexus_mod:voxel_s"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:voxel_cube",
+    "count": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "infinity_nexus_mod:compacting",
+  "ingredients": [
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "infinity_nexus_mod:voxel_cube" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:iron_bars" },
+    { "item": "infinity_nexus_miner:ancient_clear_glass" },
+    { "item": "minecraft:iron_bars" },
+    { "item": "infinity_nexus_miner:ancient_clear_glass" },
+    { "item": "infinity_nexus_mod:infinity_singularity" },
+    { "item": "infinity_nexus_miner:ancient_clear_glass" },
+    { "item": "minecraft:iron_bars" },
+    { "item": "infinity_nexus_miner:ancient_clear_glass" },
+    { "item": "minecraft:iron_bars" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "infinity_nexus_mod:voxel_cube" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" },
+    { "item": "minecraft:crying_obsidian" }
+  ],
+  "output": {
+    "count": 1,
+    "id": "infinity_nexus_mod:tank"
+  }
+}

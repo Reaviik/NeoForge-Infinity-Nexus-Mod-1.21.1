@@ -1,0 +1,6 @@
+{
+  "parent": "infinity_nexus_mod:item/imperial_infinity_bow",
+  "textures": {
+    "layer0": "infinity_nexus_mod:item/imperial_infinity_bow_pulling_1"
+  }
+}

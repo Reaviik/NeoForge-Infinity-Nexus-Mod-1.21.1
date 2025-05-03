@@ -1,0 +1,21 @@
+{
+  "type": "infinity_nexus_mod:pressing",
+  "energy": 38400,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_6"
+    },
+    {
+      "item": "infinity_nexus_mod:plastic",
+      "count": 3
+    },
+    {
+      "item": "infinity_nexus_mod:gold_sheet_cast"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:industrial_sheet",
+    "count": 1
+  }
+}

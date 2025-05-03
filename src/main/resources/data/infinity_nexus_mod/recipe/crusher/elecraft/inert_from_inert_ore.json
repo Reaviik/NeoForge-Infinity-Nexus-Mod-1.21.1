@@ -1,0 +1,25 @@
+{
+  "type": "infinity_nexus_mod:crushing",
+  "energy": 1200,
+  "duration": 130,
+  "can_duplicate": false,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_2"
+    },
+    {
+      "item": "elementalcraft:inert_crystal_ore",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "elementalcraft:inert_crystal",
+    "count": 2
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "elementalcraft"
+    }
+  ]
+}

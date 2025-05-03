@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:dragon_head"
+    },
+    "B": {
+      "item": "minecraft:bell"
+    },
+    "C": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "D": {
+      "item": "minecraft:decorated_pot"
+    },
+    "E": {
+      "item": "minecraft:nether_star"
+    },
+    "F": {
+      "item": "minecraft:jukebox"
+    },
+    "G": {
+      "item": "minecraft:torchflower_seeds"
+    },
+    "H": {
+      "item": "minecraft:elytra"
+    },
+    "I": {
+      "item": "minecraft:cake"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:voxel_d"
+  },
+  "show_notification": true
+}

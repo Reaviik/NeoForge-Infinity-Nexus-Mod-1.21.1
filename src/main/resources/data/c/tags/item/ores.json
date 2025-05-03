@@ -1,0 +1,20 @@
+{
+  "values": [
+    "infinity_nexus_mod:silver_ore",
+    "infinity_nexus_mod:tin_ore",
+    "infinity_nexus_mod:lead_ore",
+    "infinity_nexus_mod:nickel_ore",
+    "infinity_nexus_mod:zinc_ore",
+    "infinity_nexus_mod:aluminum_ore",
+    "infinity_nexus_mod:uranium_ore",
+    "infinity_nexus_mod:infinity_ore",
+    "infinity_nexus_mod:deepslate_silver_ore",
+    "infinity_nexus_mod:deepslate_tin_ore",
+    "infinity_nexus_mod:deepslate_lead_ore",
+    "infinity_nexus_mod:deepslate_nickel_ore",
+    "infinity_nexus_mod:deepslate_zinc_ore",
+    "infinity_nexus_mod:deepslate_aluminum_ore",
+    "infinity_nexus_mod:deepslate_uranium_ore",
+    "infinity_nexus_mod:deepslate_infinity_ore"
+  ]
+}

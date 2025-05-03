@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinity_nexus_mod:infinity_nugget"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "A A",
+    "B B",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinity_nexus_mod:item_dislocator"
+  }
+}

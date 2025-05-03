@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "infinity_nexus_mod:unstable_matter"
+    }
+  },
+  "pattern": [
+    "#  ",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "id": "infinity_nexus_mod:uranium_ore",
+    "count": 5
+  },
+  "show_notification": true
+}

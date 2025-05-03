@@ -1,0 +1,22 @@
+{
+  "type": "infinity_nexus_mod:squeezing",
+  "energy": 1200,
+  "duration": 130,
+  "fluidType": {
+    "id": "infinity_nexus_mod:lubricant_water_fluid",
+    "amount": 10
+  },
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_2"
+    },
+    {
+      "item": "minecraft:melon_seeds",
+      "count": 3
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:bio_mass",
+    "count": 1
+  }
+}

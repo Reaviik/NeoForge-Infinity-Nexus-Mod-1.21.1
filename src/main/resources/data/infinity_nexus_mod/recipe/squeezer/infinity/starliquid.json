@@ -1,0 +1,22 @@
+{
+  "type": "infinity_nexus_mod:squeezing",
+  "energy": 1000,
+  "duration": 130,
+  "fluidType": {
+    "id": "infinity_nexus_mod:starliquid_water_fluid",
+    "amount": 1
+  },
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_7"
+    },
+    {
+      "item": "minecraft:nether_star",
+      "count": 1
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:star_fragment",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "infinity_nexus_mod:pressing",
+  "energy": 19200,
+  "duration": 130,
+  "ingredients": [
+    {
+      "tag": "infinity_nexus_core:up_8"
+    },
+    {
+      "item": "infinity_nexus_mod:infinity_sheet",
+      "count": 1
+    },
+    {
+      "item": "infinity_nexus_mod:diamond_dust"
+    }
+  ],
+  "output": {
+    "id": "infinity_nexus_mod:infinity_mesh_cast",
+    "count": 1
+  }
+}
