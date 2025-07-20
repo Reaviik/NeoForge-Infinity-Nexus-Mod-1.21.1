@@ -25,7 +25,7 @@ public class Infuser extends BaseMachineBlock {
     public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 15, 16);
 
     public Infuser(Properties pProperties) {
-        super(pProperties, CODEC);
+        super(pProperties, CODEC, null, null, null);
     }
     @Override
     protected void dropContents(Level level, BlockPos pos, BlockEntity blockEntity) {

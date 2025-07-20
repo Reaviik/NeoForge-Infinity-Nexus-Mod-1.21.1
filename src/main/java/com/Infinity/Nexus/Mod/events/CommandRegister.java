@@ -1,8 +1,8 @@
 package com.Infinity.Nexus.Mod.events;
 
 import com.Infinity.Nexus.Mod.InfinityNexusMod;
-import com.Infinity.Nexus.Mod.command.Infuser;
-import com.Infinity.Nexus.Mod.command.Teste;
+import com.Infinity.Nexus.Mod.commands.Infuser;
+import com.Infinity.Nexus.Mod.commands.Teste;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;

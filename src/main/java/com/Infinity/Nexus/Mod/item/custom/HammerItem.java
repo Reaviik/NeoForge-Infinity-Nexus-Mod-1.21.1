@@ -11,8 +11,10 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.phys.BlockHitResult;
@@ -23,7 +25,8 @@ import java.util.List;
 
 public class HammerItem extends DiggerItem {
     public HammerItem(ModToolTiers pTier, Properties pProperties) {
-        super(pTier, BlockTags.MINEABLE_WITH_PICKAXE, pProperties);
+        //super(pTier, BlockTags.MINEABLE_WITH_PICKAXE, pProperties);
+        super(pTier, BlockTags.MINEABLE_WITH_PICKAXE, pProperties.attributes(AxeItem.createAttributes(pTier, pTier.getAttackDamageBonus(), pTier.getSpeed())));
     }
     public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayer player) {
         List<BlockPos> positions = new ArrayList<>();

@@ -1,0 +1,58 @@
+{
+  "type": "silentgear:simple",
+  "parent": "silentgear:empty",
+  "crafting": {
+    "can_salvage": true,
+    "categories": [
+      "intermediate"
+    ],
+    "ingredient": {
+      "item": "infinity_nexus_mod:carbon_plate"
+    },
+    "gear_type_blacklist": [],
+    "part_substitutes": {}
+  },
+  "display": {
+    "color": "#FF202020",
+    "main_texture_type": "HIGH_CONTRAST",
+    "name": {
+      "text": "Carbon Plate"
+    }
+  },
+  "properties": {
+    "silentgear:main": {
+      "durability": 1500.0,
+      "armor": 20.0,
+      "armor/boots": 3.0,
+      "armor/chestplate": 8.0,
+      "armor/helmet": 3.0,
+      "armor/leggings": 6.0,
+      "armor_durability": 25.0,
+      "enchantment_value": 15.0,
+      "harvest_speed": 6.0,
+      "harvest_tier": {
+        "name": "iron",
+        "level_hint": "2",
+        "incorrect_blocks_for_tool": "minecraft:incorrect_for_iron_tool"
+      },
+      "rarity": 40.0,
+      "traits": [
+        {
+          "trait": "silentgear:light",
+          "level": 2,
+          "conditions": []
+        },
+        {
+          "trait": "silentgear:sturdy",
+          "level": 2,
+          "conditions": []
+        },
+        {
+          "trait": "silentgear:fireproof",
+          "level": 1,
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

@@ -36,6 +36,7 @@ public class CommonUpgrades {
                 }if (entity instanceof SqueezerBlockEntity be) { be.setMachineLevel(stack, pPlayer);
                 }if (entity instanceof PlacerBlockEntity be) { be.setMachineLevel(stack, pPlayer);
                 }if (entity instanceof BatteryBlockEntity be) { be.setMachineLevel(stack, pPlayer);
+                }if (entity instanceof CompactorAutoBlockEntity be) { be.setMachineLevel(stack, pPlayer);
                 }
             } else if (upgrade) {
                 if (Objects.requireNonNull(entity) instanceof AssemblerBlockEntity be) { be.setUpgradeLevel(stack, pPlayer);
@@ -48,6 +49,7 @@ public class CommonUpgrades {
                 } else if (entity instanceof SmelteryBlockEntity be) { be.setUpgradeLevel(stack, pPlayer);
                 } else if (entity instanceof SqueezerBlockEntity be) { be.setUpgradeLevel(stack, pPlayer);
                 } else if (entity instanceof TankBlockEntity be) { be.setUpgradeLevel(stack, pPlayer);
+                } else if (entity instanceof CompactorAutoBlockEntity be) { be.setUpgradeLevel(stack, pPlayer);
                 }
             } else if (solarUpgrade) {
                 if (Objects.requireNonNull(entity) instanceof SolarBlockEntity be) { be.setSolarLevel(stack, pPlayer);

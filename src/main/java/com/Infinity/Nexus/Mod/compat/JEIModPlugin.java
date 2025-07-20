@@ -5,6 +5,7 @@ import com.Infinity.Nexus.Mod.block.ModBlocksAdditions;
 import com.Infinity.Nexus.Mod.item.ModItemsProgression;
 import com.Infinity.Nexus.Mod.recipe.*;
 import com.Infinity.Nexus.Mod.screen.assembler.AssemblerScreen;
+import com.Infinity.Nexus.Mod.screen.compactor.CompactorScreen;
 import com.Infinity.Nexus.Mod.screen.condenser.CondenserScreen;
 import com.Infinity.Nexus.Mod.screen.crusher.CrusherScreen;
 import com.Infinity.Nexus.Mod.screen.factory.FactoryScreen;
@@ -117,6 +118,7 @@ public class JEIModPlugin implements IModPlugin {
         registration.addRecipeCatalyst(ModBlocksAdditions.FERMENTATION_BARREL.get().asItem().getDefaultInstance(), FermentationBarrelCategory.FERMENTATION_BARREL_TYPE);
         registration.addRecipeCatalyst(ModBlocksAdditions.INFUSER.get().asItem().getDefaultInstance(), InfuserCategory.INFUSER_TYPE);
         registration.addRecipeCatalyst(ModBlocksAdditions.COMPACTOR.get().asItem().getDefaultInstance(), CompactorCategory.COMPACTOR_TYPE);
+        registration.addRecipeCatalyst(ModBlocksAdditions.COMPACTOR_AUTO.get().asItem().getDefaultInstance(), CompactorCategory.COMPACTOR_TYPE);
     }
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
@@ -129,6 +131,7 @@ public class JEIModPlugin implements IModPlugin {
        registration.addRecipeClickArea(SmelteryScreen.class,162, -10,8,9, SmelteryCategory.SMELTERY_TYPE);
        registration.addRecipeClickArea(CondenserScreen.class,162, -10,8,9, MatterCondenserCategory.MATTER_CONDENSER_TYPE);
        registration.addRecipeClickArea(FermentationBarrelScreen.class,162, -10,8,9, FermentationBarrelCategory.FERMENTATION_BARREL_TYPE);
+       registration.addRecipeClickArea(CompactorScreen.class,162, -10,8,9, CompactorCategory.COMPACTOR_TYPE);
     }
 
 }

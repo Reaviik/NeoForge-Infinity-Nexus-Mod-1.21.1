@@ -489,5 +489,6 @@
 
   "item.infinity_nexus_mod.fractal": "Fractal",
   "block.infinity_nexus_mod.battery": "Bateria de Energia",
-  "item.infinity_nexus.battery_description": "Você pode armazenar mais energia com um componente melhor e também pode mover a bateria com a energia armazenada. A bateria envia energia automaticamente para os blocos adjacentes."
+  "item.infinity_nexus.battery_description": "Você pode armazenar mais energia com um componente melhor e também pode mover a bateria com a energia armazenada. A bateria envia energia automaticamente para os blocos adjacentes.",
+  "block.infinity_nexus_mod.compactor_auto": "Auto Compactador"
 }

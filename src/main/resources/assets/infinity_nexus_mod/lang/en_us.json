@@ -467,8 +467,6 @@
   "tooltip.infinity_nexus_mod.tank_empty": "Empty",
   "item.infinity_nexus.tank_description": "While completely full never empties",
 
-  "infinity_nexus_mod.guide_name": "Infinity Nexus Guide",
-
   "tooltip.infinity_nexus.translocator_link_cord": "Linked to:",
   "tooltip.infinity_nexus.translocator_link_type": "Type:",
   "block.infinity_nexus_mod.translocator": "Item Translocator",
@@ -500,5 +498,6 @@
 
   "item.infinity_nexus_mod.fractal": "Fractal",
   "block.infinity_nexus_mod.battery": "Energy Battery",
-  "item.infinity_nexus.battery_description": "You can store more energy with a better component, and you can also move the battery with the stored energy. The battery automatically sends energy to adjacent blocks."
+  "item.infinity_nexus.battery_description": "You can store more energy with a better component, and you can also move the battery with the stored energy. The battery automatically sends energy to adjacent blocks.",
+  "block.infinity_nexus_mod.compactor_auto": "Auto Compactor"
 }

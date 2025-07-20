@@ -32,14 +32,17 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public abstract class BaseMachineBlock extends BaseEntityBlock {
-    public static final IntegerProperty LIT = IntegerProperty.create("lit", 0, 17);
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    protected final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
+    public static IntegerProperty LIT = IntegerProperty.create("lit", 0, 17);
+    protected VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
+    public static DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     protected final MapCodec<BaseEntityBlock> CODEC;
 
-    protected BaseMachineBlock(Properties properties, MapCodec<BaseEntityBlock> codec) {
+    protected BaseMachineBlock(Properties properties, MapCodec<BaseEntityBlock> codec, IntegerProperty lit, DirectionProperty facing, VoxelShape shape) {
         super(properties);
         this.CODEC = codec;
+        this.LIT = lit == null ? LIT : lit;
+        this.FACING = facing == null ? FACING : facing;
+        this.SHAPE = shape == null ? SHAPE : shape;
     }
 
     @Override

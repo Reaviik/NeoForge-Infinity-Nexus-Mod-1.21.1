@@ -17,6 +17,7 @@ public class ModDataComponents {
 
     public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, InfinityNexusMod.MOD_ID);
 
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> BASIC_INT = register("basic_int",  op -> op.persistent(Codec.INT));
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> HAMMER_RANGE = register("hammer_range",  op -> op.persistent(Codec.INT));
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> DISLOCATOR_ONOFRE = register("dislocator_onofre", op -> op.persistent(Codec.BOOL));
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> TRANSLOCATOR_TYPE = register("translocator_type", op -> op.persistent(Codec.BOOL));

@@ -6,6 +6,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @EventBusSubscriber(modid = InfinityNexusMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
@@ -72,31 +73,32 @@ public class Config
     //BATTERY
     private static final ModConfigSpec.IntValue BATTERY_ENERGY_STORAGE_CAPACITY  = BUILDER.comment("Define a quantidade de energia a Bateria pode armazenar").defineInRange("battery_energy_capacity", 540000000, 1, Integer.MAX_VALUE);
     private static final ModConfigSpec.IntValue BATTERY_ENERGY_TRANSFER_RATE  = BUILDER.comment("Define a quantidade de energia a Bateria pode receber por tick").defineInRange("battery_energy_transfer", 512000, 1, Integer.MAX_VALUE);
+    //COMPACTOR AUTO
+    private static final ModConfigSpec.IntValue COMPACTOR_AUTO_ENERGY_STORAGE_CAPACITY  = BUILDER.comment("Define a quantidade de energia o Auto Compactor pode armazenar").defineInRange("compactor_auto_energy_capacity", 64000, 1, Integer.MAX_VALUE);
+    private static final ModConfigSpec.IntValue COMPACTOR_AUTO_ENERGY_TRANSFER_RATE  = BUILDER.comment("Define a quantidade de energia o Auto Compactor pode receber por tick").defineInRange("compactor_auto_energy_transfer", 512000, 1, Integer.MAX_VALUE);
     //SQUEEZER
     private static final ModConfigSpec.IntValue SQUEEZER_ENERGY_STORAGE_CAPACITY  = BUILDER.comment("Define a quantidade de energia o Espremedor pode armazenar").defineInRange("squeezer_energy_capacity", 600000, 1, Integer.MAX_VALUE);
     private static final ModConfigSpec.IntValue SQUEEZER_ENERGY_TRANSFER_RATE  = BUILDER.comment("Define a quantidade de energia o Espremedor pode receber por tick").defineInRange("squeezer_energy_transfer", 600000, 1, Integer.MAX_VALUE);
     private static final ModConfigSpec.IntValue SQUEEZER_FLUID_STORAGE_CAPACITY  = BUILDER.comment("Define a quantidade de liquido o Espremedor pode armazenar").defineInRange("squeezer_fluid_capacity", 10000, 1, Integer.MAX_VALUE);
     private static final ModConfigSpec.IntValue SQUEEZER_MINIMUM_TICK  = BUILDER.comment("Define a menor velocidade que o Espremedor pode trabalhar").defineInRange("squeezer_minimum_tick", 1, 1, Integer.MAX_VALUE);
     //PLACER
-    private static final ModConfigSpec.ConfigValue<List<String>> LIST_OF_NON_PLACEABLE_BLOCKS = BUILDER
+    private static final ModConfigSpec.ConfigValue<List<? extends String>> LIST_OF_NON_PLACEABLE_BLOCKS = BUILDER
             .comment("Lista de Itens que o Placer não pode colocar no chão.")
-            .define("list_of_non_placeable_blocks", List.of(
-                    "minecraft:redstone"
-            ));
+            .defineList("list_of_non_placeable_blocks", List.of("minecraft:redstone"), o -> o instanceof String);
     //DISPLAY
     private static final ModConfigSpec.ConfigValue<Double> DISPLAY_ROTATION_SPEED_MULTIPLIER = BUILDER.comment("Define o multiplicador da velocidade de rotacao dos itens no display").define("display_rotation_speed_multiplier", 0.05D);
     //Tank
     private static final ModConfigSpec.IntValue TANK_CAPACITY = BUILDER.comment("Define a quantidade de itens que o tanque pode armazenar").defineInRange("tank_capacity", 16000000, 1, Integer.MAX_VALUE);
     private static final ModConfigSpec.BooleanValue TANK_CAN_ENDLESS = BUILDER.comment("Define se o tanque pode ficar com liquido infinito quando cheio").define("tank_can_endless", true);
     private static final ModConfigSpec.BooleanValue BLACKLIST_TANK_FLUIDS_TOGGLE = BUILDER.comment("False = blacklist, True = whitelist").define("blacklist_tank_fluids_toggle", false);
-    private static final ModConfigSpec.ConfigValue<List<String>> BLACKLIST_TANK_FLUIDS = BUILDER
+    private static final ModConfigSpec.ConfigValue<List<? extends String>> BLACKLIST_TANK_FLUIDS = BUILDER
             .comment("Lista de liquidos que o tanque nao pode tornar infinito.")
             .define("blacklist_tank_fluids", List.of(
                     "infinity_nexus_mod:sugarcane_juice_water_fluid",
                     "infinity_nexus_mod:wine_water_fluid",
                     "infinity_nexus_mod:potato_juice_water_fluid",
                     "infinity_nexus_mod:vinegar_water_fluid"
-            ));
+            ), o -> o instanceof String);
     private static final ModConfigSpec.IntValue TRANSLOCATOR_DELAY = BUILDER.comment("Define a quantidade de ticks entre uma operação e outra").defineInRange("translator_delay", 20, 1, Integer.MAX_VALUE);
     private static final ModConfigSpec.IntValue TRANSLOCATOR_RANGE_LIMIT = BUILDER.comment("Define a distancia maxima que o translator pode enviar").defineInRange("translator_range_limit", 100, 1, Integer.MAX_VALUE);
     private static final ModConfigSpec.IntValue TRANSLOCATOR_SKIP_PROGRESS = BUILDER.comment("Define a quantidade de ticks ignorados quando recebe um item de outro translocador").defineInRange("translator_skip_progress", 15, 1, Integer.MAX_VALUE);
@@ -167,20 +169,23 @@ public class Config
         //BATTERY
         ConfigUtils.battery_energy_storage_capacity = BATTERY_ENERGY_STORAGE_CAPACITY.get();
         ConfigUtils.battery_energy_transfer_rate = BATTERY_ENERGY_TRANSFER_RATE.get();
+        //COMPACTOR AUTO
+        ConfigUtils.compactor_auto_energy_storage_capacity = COMPACTOR_AUTO_ENERGY_STORAGE_CAPACITY.get();
+        ConfigUtils.compactor_auto_energy_transfer_rate = COMPACTOR_AUTO_ENERGY_TRANSFER_RATE.get();
         //SQUEEZER
         ConfigUtils.squeezer_energy_storage_capacity = SQUEEZER_ENERGY_STORAGE_CAPACITY.get();
         ConfigUtils.squeezer_energy_transfer_rate = SQUEEZER_ENERGY_TRANSFER_RATE.get();
         ConfigUtils.squeezer_fluid_storage_capacity = SQUEEZER_FLUID_STORAGE_CAPACITY.get();
         ConfigUtils.squeezer_minimum_tick = SQUEEZER_MINIMUM_TICK.get();
         //PLACER
-        ConfigUtils.list_of_non_placeable_blocks = LIST_OF_NON_PLACEABLE_BLOCKS.get();
+        ConfigUtils.list_of_non_placeable_blocks = new ArrayList<>(LIST_OF_NON_PLACEABLE_BLOCKS.get());
         //DISPLAY
         ConfigUtils.display_rotation_speed_multiplier = DISPLAY_ROTATION_SPEED_MULTIPLIER.get();
         //TANK
         ConfigUtils.tank_capacity = TANK_CAPACITY.get();
         ConfigUtils.tank_can_endless = TANK_CAN_ENDLESS.get();
         ConfigUtils.blacklist_tank_fluids_toggle = BLACKLIST_TANK_FLUIDS_TOGGLE.get();
-        ConfigUtils.blacklist_tank_fluids = BLACKLIST_TANK_FLUIDS.get();
+        ConfigUtils.blacklist_tank_fluids = new ArrayList<>(BLACKLIST_TANK_FLUIDS.get());
         //TRANSLOCATOR
         ConfigUtils.translocator_delay = TRANSLOCATOR_DELAY.get();
         ConfigUtils.translocator_range_limit = TRANSLOCATOR_RANGE_LIMIT.get();

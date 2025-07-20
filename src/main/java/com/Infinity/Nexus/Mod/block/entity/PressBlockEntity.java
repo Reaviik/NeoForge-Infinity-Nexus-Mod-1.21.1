@@ -6,6 +6,7 @@ import com.Infinity.Nexus.Core.itemStackHandler.RestrictedItemStackHandler;
 import com.Infinity.Nexus.Core.utils.*;
 import com.Infinity.Nexus.Mod.block.custom.Press;
 import com.Infinity.Nexus.Mod.config.ConfigUtils;
+import com.Infinity.Nexus.Mod.item.ModItemsProgression;
 import com.Infinity.Nexus.Mod.recipe.ModRecipes;
 import com.Infinity.Nexus.Mod.recipe.MultipleMachinesRecipeInput;
 import com.Infinity.Nexus.Mod.recipe.PressRecipes;
@@ -58,11 +59,25 @@ public class PressBlockEntity extends BaseMenuProviderBlockEntity {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0,1 -> !ModUtils.isUpgrade(stack) && !ModUtils.isComponent(stack);
-                case 2 -> false;
+                case 2 -> true;
                 case 3,4,5,6 -> ModUtils.isUpgrade(stack);
                 case 7 -> ModUtils.isComponent(stack);
                 default -> super.isItemValid(slot, stack);
             };
+        }
+        @Override
+        public @NotNull ItemStack extractItem(int slot, int amount, boolean simulate, boolean fromAutomation) {
+            if (slot == 2) {
+                return super.extractItem(slot, amount, simulate, false);
+            }
+            return super.extractItem(slot, amount, simulate, fromAutomation);
+        }
+        @Override
+        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (slot == 2) {
+                return stack;
+            }
+            return super.insertItem(slot, stack, simulate);
         }
     };
     public IItemHandler getItemHandler(Direction direction) {
@@ -142,7 +157,7 @@ public class PressBlockEntity extends BaseMenuProviderBlockEntity {
 
         if (hasProgressFinished()) {
             craftItem(recipe);
-            ModUtils.ejectItemsWhePusher(pPos.above(),UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
+            ModUtils.ejectItemsWhePusher(pPos,UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
             resetProgress();
         }
     }
@@ -163,16 +178,14 @@ public class PressBlockEntity extends BaseMenuProviderBlockEntity {
 
 
     private void craftItem(Optional<RecipeHolder<PressRecipes>> recipe) {
-        ItemStack result = recipe.get().value().getResultItem(null);
+        ItemStack result = recipe.get().value().getResultItem(level.registryAccess());
 
-        result.setCount(this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount());
         ItemStackHandlerUtils.extractItem(INPUT_SLOT[0], recipe.get().value().getInputCount(), false, itemHandler);
         ItemStack component = this.itemHandler.getStackInSlot(COMPONENT_SLOT);
 
         ModUtils.useComponent(component, level, this.getBlockPos());
 
-
-        ItemStackHandlerUtils.setStackInSlot(OUTPUT_SLOT, result, itemHandler);
+        ItemStackHandlerUtils.insertItem(OUTPUT_SLOT, result, false, itemHandler);
 
         SoundUtils.playSoundHideoutMuffler(level, worldPosition, itemHandler, UPGRADE_SLOTS, SoundEvents.ANVIL_FALL);
     }

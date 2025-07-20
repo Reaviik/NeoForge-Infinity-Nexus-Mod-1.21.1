@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": "infinity_nexus_mod:lead_ore_placed",
-  "step": "underground_ores"
-}

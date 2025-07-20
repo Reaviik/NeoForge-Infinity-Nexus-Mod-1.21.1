@@ -7,3 +7,80 @@
 7° - Registrar as Recipes caso exista
 8° - Ajustar a função tick do BlockEntity
 9° - Textura, Gui, Tradução, Datagen, etc.
+
+
+Um simples e moderno mod de máquinas!
+
+Production:
+ Crusher {Upgradable}
+ Press {Upgradable}
+ Squeezer {Upgradable}
+ Smelter {Upgradable}
+ Assembler {Upgradable}
+ Factory {Upgradable}
+ Fermentation Barrel
+ Infuser (multiblock)
+ Compactor (multiblock)
+ Auto Compactor (multiblock)
+
+Generation:
+ Generator (Solid Fuels) [Energy]
+ Solar Panel [Energy] {Upgradable}
+ Miner (multiblock) [Resources] {Upgradable}
+ Recycler [Resources] {Upgradable}
+ Matter Condenser [Resources] {Upgradable}
+
+Storage:
+ Battery {Upgradable}
+ Fluid Tank
+
+Utils:
+ Translocator [Items]
+ Translocator [Energy]
+ Translocator [Fluids]
+ Block Placer {Upgradable}
+ Mob Crusher {Upgradable}
+
+Armor:
+ Carbon Armor
+ Infinity Armor
+ Imperial Infinity Armor
+
+Tools and Weapons:
+ Carbon Tools
+ Infinity Tools
+ Imperial Infinity Tools
+
+Utils:
+ Item Display
+ Entity Display
+ Entity Centralizer
+ Depot
+ Stone Depot
+ Catwalk's
+
+Resources:
+ Ores: Silver, Nickel, Zinc, Aluminium, Infinity, Tin, Lead
+ Ingots
+ Nuggets
+ Plates
+ Wires
+ Screws
+ Unstable Matter, Stable Matter, Iridium
+
+Fluids:
+ Lubricant
+ Ethanol
+ Oil
+ Vinegar
+ SugarCane Juice
+ Potato Juice
+ Wine
+ Experience
+ Starliquid
+
+Dimensions:
+ Explorer /Overworld mirror/
+
+
+

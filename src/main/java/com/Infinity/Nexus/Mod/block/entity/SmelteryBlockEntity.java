@@ -61,11 +61,27 @@ public class SmelteryBlockEntity extends BaseMenuProviderBlockEntity {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0, 1, 2 -> !ModUtils.isUpgrade(stack) && !ModUtils.isComponent(stack);
-                case 3 -> false;
+                case 3 -> true;
                 case 4, 5, 6, 7 -> ModUtils.isUpgrade(stack);
                 case 8 -> ModUtils.isComponent(stack);
                 default -> super.isItemValid(slot, stack);
             };
+        }
+
+        @Override
+        public @NotNull ItemStack extractItem(int slot, int amount, boolean simulate, boolean fromAutomation) {
+            if (slot == 3) {
+                return super.extractItem(slot, amount, simulate, false);
+            }
+            return super.extractItem(slot, amount, simulate, fromAutomation);
+        }
+
+        @Override
+        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (slot == 3) {
+                return stack;
+            }
+            return super.insertItem(slot, stack, simulate);
         }
     };
 
@@ -143,7 +159,7 @@ public class SmelteryBlockEntity extends BaseMenuProviderBlockEntity {
 
         if (hasProgressFinished()) {
             craftItem();
-            ModUtils.ejectItemsWhePusher(pPos.above(),UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
+            ModUtils.ejectItemsWhePusher(pPos,UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
             resetProgress();
         }
     }
@@ -173,8 +189,7 @@ public class SmelteryBlockEntity extends BaseMenuProviderBlockEntity {
         }
         ItemStack component = this.itemHandler.getStackInSlot(COMPONENT_SLOT);
         ModUtils.useComponent(component, level, this.getBlockPos());
-        result.setCount(this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount());
-        ItemStackHandlerUtils.setStackInSlot(OUTPUT_SLOT, result, itemHandler);
+        ItemStackHandlerUtils.insertItem(OUTPUT_SLOT, result, false, itemHandler);
         SoundUtils.playSound(level, worldPosition, SoundSource.BLOCKS, SoundEvents.LAVA_EXTINGUISH, 0.3f, 1.0f);
     }
 

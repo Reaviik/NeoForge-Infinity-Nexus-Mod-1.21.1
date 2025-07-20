@@ -16,7 +16,7 @@ public class FermentationBarrel extends BaseMachineBlock {
     public static final MapCodec<BaseEntityBlock> CODEC = simpleCodec(FermentationBarrel::new);
 
     public FermentationBarrel(Properties pProperties) {
-        super(pProperties, CODEC);
+        super(pProperties, CODEC, null, null, null);
     }
 
     @Override

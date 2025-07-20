@@ -159,7 +159,7 @@ public class BatteryBlockEntity extends BaseMenuProviderBlockEntity {
         setChanged(pLevel, pPos, pState);
 
         if (hasProgressFinished()) {
-            ModUtils.ejectItemsWhePusher(pPos.above(),UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, this.itemHandler, pLevel);
+            ModUtils.ejectItemsWhePusher(pPos,UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, this.itemHandler, pLevel);
             resetProgress();
         }
     }

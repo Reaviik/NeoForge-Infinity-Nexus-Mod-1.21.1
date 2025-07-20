@@ -36,6 +36,7 @@ public class ModTabAdditions {
                         pOutput.accept(ModBlocksAdditions.INFUSER);
                         pOutput.accept(ModBlocksAdditions.FACTORY);
                         pOutput.accept(ModBlocksAdditions.COMPACTOR);
+                        pOutput.accept(ModBlocksAdditions.COMPACTOR_AUTO);
                         pOutput.accept(ModBlocksAdditions.SOLAR);
                         pOutput.accept(ModBlocksAdditions.FERMENTATION_BARREL);
                         pOutput.accept(ModBlocksAdditions.DISPLAY);

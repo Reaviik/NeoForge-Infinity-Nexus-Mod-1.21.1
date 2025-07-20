@@ -1,0 +1,83 @@
+{
+  "type": "silentgear:simple",
+  "parent": "silentgear:empty",
+  "crafting": {
+    "can_salvage": true,
+    "categories": [
+      "metal"
+    ],
+    "gear_type_blacklist": [],
+    "ingredient": {
+      "item": "infinity_nexus_mod:infinium_stellarum_ingot"
+    },
+    "part_substitutes": {}
+  },
+  "display": {
+    "color": "#97FDFF",
+    "main_texture_type": "HIGH_CONTRAST",
+    "name": {
+      "translate": "material.silentgear.netherite"
+    },
+    "name_prefix": {
+      "translate": "material.silentgear.netherite"
+    }
+  },
+  "properties": {
+    "silentgear:coating": {
+      "durability": [
+        {
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.9
+        },
+        {
+          "operation": "ADD",
+          "value": 5.0
+        }
+      ],
+      "armor_durability": {
+        "operation": "MULTIPLY_TOTAL",
+        "value": 0.321212125
+      },
+      "harvest_speed": {
+        "operation": "MULTIPLY_TOTAL",
+        "value": 0.325
+      },
+      "attack_damage": {
+        "operation": "MULTIPLY_TOTAL",
+        "value": 0.93333334
+      },
+      "magic_damage": {
+        "operation": "MULTIPLY_TOTAL",
+        "value": 0.93333334
+      },
+      "ranged_damage": {
+        "operation": "MULTIPLY_TOTAL",
+        "value": 0.93333334
+      },
+      "armor_toughness": {
+        "operation": "ADD",
+        "value": 6.0
+      },
+      "knockback_resistance": {
+        "operation": "ADD",
+        "value": 3.0
+      },
+      "enchantment_value": {
+        "operation": "ADD",
+        "value": 15.0
+      },
+      "harvest_tier": {
+        "incorrect_blocks_for_tool": "minecraft:incorrect_for_netherite_tool",
+        "level_hint": "4",
+        "name": "netherite"
+      },
+      "traits": [
+        {
+          "conditions": [],
+          "level": 1,
+          "trait": "silentgear:fireproof"
+        }
+      ]
+    }
+  }
+}

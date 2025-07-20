@@ -72,6 +72,13 @@ public class FactoryBlockEntity extends BaseMenuProviderBlockEntity {
                 default -> super.isItemValid(slot, stack);
             };
         }
+        @Override
+        public @NotNull ItemStack extractItem(int slot, int amount, boolean simulate, boolean fromAutomation) {
+            if (slot == 16) {
+                return super.extractItem(slot, amount, simulate, false);
+            }
+            return super.extractItem(slot, amount, simulate, fromAutomation);
+        }
         //By gsoldera
         @Override
         public int getSlotLimit(int slot) {
@@ -215,7 +222,7 @@ public class FactoryBlockEntity extends BaseMenuProviderBlockEntity {
 
         if (hasProgressFinished()) {
             craftItem(recipe);
-            ModUtils.ejectItemsWhePusher(pPos.above(),UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
+            ModUtils.ejectItemsWhePusher(pPos,UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
             resetProgress();
         }
     }

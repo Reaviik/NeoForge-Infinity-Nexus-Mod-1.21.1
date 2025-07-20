@@ -61,6 +61,9 @@ public class ConfigUtils {
     //BATTERY
     public static int battery_energy_storage_capacity;
     public static int battery_energy_transfer_rate;
+    //COMPACTOR AUTO
+    public static int compactor_auto_energy_storage_capacity;
+    public static int compactor_auto_energy_transfer_rate;
     //SQUEEZER
     public static int squeezer_energy_storage_capacity;
     public static int squeezer_energy_transfer_rate;

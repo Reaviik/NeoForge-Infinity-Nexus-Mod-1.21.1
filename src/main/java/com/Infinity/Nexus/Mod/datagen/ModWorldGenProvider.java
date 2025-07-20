@@ -18,7 +18,6 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-    //TODO FIX ORES
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
             //.add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem)
             //.add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)

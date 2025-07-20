@@ -57,7 +57,7 @@ public class Compactor extends BaseEntityBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         CommonUpgrades.setUpgrades(level, pos, player);
-        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+        return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }
 
 

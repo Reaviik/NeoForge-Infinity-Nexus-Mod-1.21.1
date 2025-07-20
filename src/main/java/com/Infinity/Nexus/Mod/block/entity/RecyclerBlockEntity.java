@@ -6,6 +6,7 @@ import com.Infinity.Nexus.Core.itemStackHandler.RestrictedItemStackHandler;
 import com.Infinity.Nexus.Core.utils.ItemStackHandlerUtils;
 import com.Infinity.Nexus.Core.utils.ModUtils;
 import com.Infinity.Nexus.Core.utils.SoundUtils;
+import com.Infinity.Nexus.Mod.InfinityNexusMod;
 import com.Infinity.Nexus.Mod.block.custom.Recycler;
 import com.Infinity.Nexus.Mod.config.ConfigUtils;
 import com.Infinity.Nexus.Mod.item.ModItemsProgression;
@@ -24,6 +25,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.energy.IEnergyStorage;
 import net.neoforged.neoforge.items.IItemHandler;
 import org.jetbrains.annotations.NotNull;
@@ -59,12 +61,25 @@ public class RecyclerBlockEntity extends BaseMenuProviderBlockEntity{
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0 -> !ModUtils.isUpgrade(stack) && !ModUtils.isComponent(stack);
-                case 1 -> false;
+                case 1 -> true;
                 case 2, 3, 4, 5 -> ModUtils.isUpgrade(stack);
                 case 6 -> ModUtils.isComponent(stack);
-
                 default -> super.isItemValid(slot, stack);
             };
+        }
+        @Override
+        public @NotNull ItemStack extractItem(int slot, int amount, boolean simulate, boolean fromAutomation) {
+            if (slot == 1) {
+                return super.extractItem(slot, amount, simulate, false);
+            }
+            return super.extractItem(slot, amount, simulate, fromAutomation);
+        }
+        @Override
+        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (slot == 1) {
+                return stack;
+            }
+            return super.insertItem(slot, stack, simulate);
         }
     };
 
@@ -144,7 +159,7 @@ public class RecyclerBlockEntity extends BaseMenuProviderBlockEntity{
 
         if (hasProgressFinished()) {
             craftItem();
-            ModUtils.ejectItemsWhePusher(pPos.above(),UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
+            ModUtils.ejectItemsWhePusher(pPos,UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
             resetProgress();
         }
     }
@@ -155,9 +170,8 @@ public class RecyclerBlockEntity extends BaseMenuProviderBlockEntity{
 
         itemHandler.getStackInSlot(INPUT_SLOT[0]).shrink(1);
         int chance = new Random().nextInt(100);
-        if(chance < 5){
-            ItemStackHandlerUtils.setStackInSlot(OUTPUT_SLOT, new ItemStack(ModItemsProgression.RESIDUAL_MATTER.get(),
-                    this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + 1), itemHandler);
+        if(chance < 5 && itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() < 64){
+            ItemStackHandlerUtils.insertItem(OUTPUT_SLOT, new ItemStack(ModItemsProgression.RESIDUAL_MATTER.get(), 1), false, itemHandler);
         }
 
         SoundUtils.playSoundHideoutMuffler(level, worldPosition, itemHandler, UPGRADE_SLOTS, SoundEvents.GRAVEL_FALL);

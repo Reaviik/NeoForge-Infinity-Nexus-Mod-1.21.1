@@ -8,7 +8,7 @@
       "tag": "infinity_nexus_core:up_2"
     },
     {
-      "item": "infinity_nexus_mod:graphite_ingot",
+      "tag": "c:ingots/graphite",
       "count": 1
     }
   ],

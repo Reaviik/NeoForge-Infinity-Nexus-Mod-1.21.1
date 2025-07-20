@@ -27,5 +27,8 @@ public class ModEventClientBusEvents {
 
         event.registerBlockEntityRenderer(ModBlockEntities.TANK_BE.get(),
                 TankBlockEntityRenderer::new);
+
+        event.registerBlockEntityRenderer(ModBlockEntities.COMPACTOR_AUTO_BE.get(),
+                CompactorAutoEntityRenderer::new);
     }
 }

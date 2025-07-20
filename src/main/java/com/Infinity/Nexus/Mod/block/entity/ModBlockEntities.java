@@ -110,6 +110,10 @@ public class ModBlockEntities {
             BLOCK_ENTITY.register("compactor_block_entity", () ->
                     BlockEntityType.Builder.of(CompactorBlockEntity::new, ModBlocksAdditions.COMPACTOR.get()).build(null));
 
+    public static final Supplier<BlockEntityType<CompactorAutoBlockEntity>> COMPACTOR_AUTO_BE =
+            BLOCK_ENTITY.register("compactor_auto_block_entity", () ->
+                    BlockEntityType.Builder.of(CompactorAutoBlockEntity::new, ModBlocksAdditions.COMPACTOR_AUTO.get()).build(null));
+
     public static final Supplier<BlockEntityType<TranslocatorItemBlockEntity>> TRASLOCATOR_ITEM_BE =
             BLOCK_ENTITY.register("traslocator_item_block_entity", () ->
                     BlockEntityType.Builder.of(TranslocatorItemBlockEntity::new, ModBlocksAdditions.TRANSLOCATOR_ITEM.get()).build(null));

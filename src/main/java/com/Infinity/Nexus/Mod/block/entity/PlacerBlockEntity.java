@@ -5,6 +5,7 @@ import com.Infinity.Nexus.Core.fakePlayer.IFFakePlayer;
 import com.Infinity.Nexus.Core.itemStackHandler.RestrictedItemStackHandler;
 import com.Infinity.Nexus.Core.utils.GetNewAABB;
 import com.Infinity.Nexus.Core.utils.GetResourceLocation;
+import com.Infinity.Nexus.Core.utils.ItemStackHandlerUtils;
 import com.Infinity.Nexus.Core.utils.ModUtils;
 import com.Infinity.Nexus.Mod.block.custom.Placer;
 import com.Infinity.Nexus.Mod.config.ConfigUtils;
@@ -198,11 +199,20 @@ public class PlacerBlockEntity extends BlockEntity implements MenuProvider {
         if(pLevel instanceof ServerLevel level) {
             Direction direction = pState.getValue(Placer.FACING);
             BlockPos placePos = getPlacePos(pPos, direction);
+            BlockState toPlace = level.getBlockState(placePos);
             if(!hasEntity(placePos)) {
                 ItemStack stack = itemHandler.getStackInSlot(INPUT_SLOT).copy();
-                IFFakePlayer player = new IFFakePlayer(level);
-                player.placeBlock(this.level, placePos, stack, direction);
-                itemHandler.extractItem(INPUT_SLOT, 1, false);
+                try {
+                    IFFakePlayer player = new IFFakePlayer(level);
+                    if(!player.placeBlock(this.level, placePos, stack, direction)) {
+                        if(level.getBlockState(placePos) != toPlace){
+                            ItemStackHandlerUtils.extractItem(INPUT_SLOT, 1, false, itemHandler);
+                        }
+                        return;
+                    }
+                    ItemStackHandlerUtils.extractItem(INPUT_SLOT, 1, false, itemHandler);
+                } catch (Exception ignored) {
+                }
             }
         }
     }
@@ -213,8 +223,8 @@ public class PlacerBlockEntity extends BlockEntity implements MenuProvider {
     }
     private boolean canPlace(ItemStack stack) {
         return !ConfigUtils.list_of_non_placeable_blocks.stream()
-                .map(structure -> BuiltInRegistries.ITEM.get(GetResourceLocation.withPath(structure)))
-                .anyMatch(structureItem -> structureItem == stack.getItem());
+                .map(block -> BuiltInRegistries.ITEM.get(GetResourceLocation.parse(block)))
+                .anyMatch(p -> p == stack.getItem());
     }
 
     private boolean isFree(BlockPos pPos) {
@@ -231,7 +241,6 @@ public class PlacerBlockEntity extends BlockEntity implements MenuProvider {
             case EAST -> pPos.east();
         };
     }
-
 
     private boolean hasRecipe(BlockPos pPos) {
         ItemStack stack = itemHandler.getStackInSlot(INPUT_SLOT);

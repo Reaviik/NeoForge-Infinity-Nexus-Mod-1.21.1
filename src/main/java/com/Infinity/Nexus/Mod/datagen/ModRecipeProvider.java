@@ -249,10 +249,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, List.of(ModItemsAdditions.PLASTIC_GOO.get()), RecipeCategory.MISC, ModItemsProgression.PLASTIC.get(), 0.15f, 10, "plastic");
 
         //TODO RECIPES
-        //simpleCookingRecipe(pRecipeOutput,"campfire_cooking", RecipeSerializer.SMOKING_RECIPE, 5, ModItemsProgression.RAW_ROD_CLAY_MODEL.get(), ModItemsProgression.ROD_CLAY_MODEL.get(), 0.25f);
-        //simpleCookingRecipe(pRecipeOutput,"campfire_cooking",RecipeSerializer.SMOKING_RECIPE,5, ModItemsProgression.RAW_SCREW_CLAY_MODEL.get(), ModItemsProgression.SCREW_CLAY_MODEL.get(), 0.25f);
-        //simpleCookingRecipe(pRecipeOutput,"campfire_cooking",RecipeSerializer.SMOKING_RECIPE,5, ModItemsProgression.RAW_SHEET_CLAY_MODEL.get(), ModItemsProgression.SHEET_CLAY_MODEL.get(), 0.25f);
-        //simpleCookingRecipe(pRecipeOutput,"campfire_cooking",RecipeSerializer.SMOKING_RECIPE,5, ModItemsProgression.RAW_WIRE_CLAY_MODEL.get(), ModItemsProgression.WIRE_CLAY_MODEL.get(), 0.25f);
+        simpleCookingRecipe(pRecipeOutput,"campfire_cooking", RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new,  5, ModItemsProgression.RAW_ROD_CLAY_MODEL.get(), ModItemsProgression.ROD_CLAY_MODEL.get(), 0.25f);
+        simpleCookingRecipe(pRecipeOutput,"campfire_cooking",RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new, 5, ModItemsProgression.RAW_SCREW_CLAY_MODEL.get(), ModItemsProgression.SCREW_CLAY_MODEL.get(), 0.25f);
+        simpleCookingRecipe(pRecipeOutput,"campfire_cooking",RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new, 5, ModItemsProgression.RAW_SHEET_CLAY_MODEL.get(), ModItemsProgression.SHEET_CLAY_MODEL.get(), 0.25f);
+        simpleCookingRecipe(pRecipeOutput,"campfire_cooking",RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new, 5, ModItemsProgression.RAW_WIRE_CLAY_MODEL.get(), ModItemsProgression.WIRE_CLAY_MODEL.get(), 0.25f);
 
     }
 

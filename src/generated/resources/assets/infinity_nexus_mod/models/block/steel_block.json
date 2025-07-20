@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "infinity_nexus_mod:block/steel_block"
-  }
-}

@@ -27,7 +27,7 @@ public class Solar extends BaseMachineBlock {
     public static final VoxelShape SHAPE_ON = Block.box(0, 0, 0, 16, 16, 16);
 
     public Solar(Properties pProperties) {
-        super(pProperties, CODEC);
+        super(pProperties, CODEC, null, null, null);
     }
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {

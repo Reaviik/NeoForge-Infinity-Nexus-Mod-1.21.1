@@ -80,6 +80,6 @@ public class CompactorCategory implements IRecipeCategory<CompactorRecipes> {
                 }
             }
         }
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 59).addItemStack(recipe.getResultItem(null));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 149, 60).addItemStack(recipe.getResultItem(null));
     }
 }

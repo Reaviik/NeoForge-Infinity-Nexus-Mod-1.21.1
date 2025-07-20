@@ -3,6 +3,7 @@ package com.Infinity.Nexus.Mod.screen;
 import com.Infinity.Nexus.Mod.InfinityNexusMod;
 import com.Infinity.Nexus.Mod.screen.assembler.AssemblerMenu;
 import com.Infinity.Nexus.Mod.screen.battery.BatteryMenu;
+import com.Infinity.Nexus.Mod.screen.compactor.CompactorMenu;
 import com.Infinity.Nexus.Mod.screen.condenser.CondenserMenu;
 import com.Infinity.Nexus.Mod.screen.crusher.CrusherMenu;
 import com.Infinity.Nexus.Mod.screen.factory.FactoryMenu;
@@ -51,6 +52,9 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<GeneratorMenu>> GENERATOR_MENU =
             registerMenuType("generator_menu", GeneratorMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<CompactorMenu>> COMPACTOR_AUTO_MENU =
+            registerMenuType("compactor_auto_menu", CompactorMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<FermentationBarrelMenu>> FERMENTATION_BARREL_MENU =
             registerMenuType("fermentation_barre_menu", FermentationBarrelMenu::new);

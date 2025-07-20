@@ -56,6 +56,13 @@ public class FermentationBarrelBlockEntity extends BaseBlockEntity implements Me
                 default -> super.isItemValid(slot, stack);
             };
         }
+        @Override
+        public @NotNull ItemStack extractItem(int slot, int amount, boolean simulate, boolean fromAutomation) {
+            if (slot == 1 || slot == 3) {
+                return super.extractItem(slot, amount, simulate, false);
+            }
+            return super.extractItem(slot, amount, simulate, fromAutomation);
+        }
     };
 
     private final FluidTank inputFluidHandler = new FluidTank(INPUT_FLUID_CAPACITY) {
@@ -151,7 +158,7 @@ public class FermentationBarrelBlockEntity extends BaseBlockEntity implements Me
 
     @Override
     protected void saveAdditional(CompoundTag pTag, HolderLookup.Provider registries) {
-        pTag.put("inventory", itemHandler.serializeNBT(registries));
+        pTag.put("inventory", this.itemHandler.serializeNBT(registries));
         pTag.putInt("fermentation_barrel.progress", progress);
         pTag.putInt("fermentation_barrel.max_progress", maxProgress);
         pTag = FLUID_STORAGE.writeToNBT(registries, pTag);
@@ -161,7 +168,7 @@ public class FermentationBarrelBlockEntity extends BaseBlockEntity implements Me
     @Override
     protected void loadAdditional(CompoundTag pTag, HolderLookup.Provider registries) {
         super.loadAdditional(pTag, registries);
-        itemHandler.deserializeNBT(registries, pTag.getCompound("inventory"));
+        this.itemHandler.deserializeNBT(registries, pTag.getCompound("inventory"));
         progress = pTag.getInt("fermentation_barrel.progress");
         maxProgress = pTag.getInt("fermentation_barrel.max_progress");
         FLUID_STORAGE.readFromNBT(registries, pTag);
@@ -235,11 +242,15 @@ public class FermentationBarrelBlockEntity extends BaseBlockEntity implements Me
         int inputCount = recipe.get().value().getInputCount();
         int fluidInputCount = recipe.get().value().getInputFluidStack().getAmount();
         while (itemHandler.getStackInSlot(INPUT_SLOT).getCount() >= inputCount && this.FLUID_STORAGE.getFluidAmount() >= fluidInputCount) {
+            if(!ItemStackHandlerUtils.canInsertItemAndAmountIntoOutputSlot(result.getItem(), recipeResultCount, OUTPUT_SLOT, itemHandler)){
+                break;
+            }
             FluidUtils.drainFluidFromTank(FLUID_STORAGE, recipeFluidInputAmount);
-
-            result.setCount(this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + (result.getCount() + recipeResultCount));
+            result.setCount(this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + recipeResultCount);
             ItemStackHandlerUtils.setStackInSlot(OUTPUT_SLOT, result, itemHandler);
-            ItemStackHandlerUtils.extractItem(INPUT_SLOT, recipeInputCount, false, itemHandler);
+            if(!itemHandler.getStackInSlot(INPUT_SLOT).is(ModItemsAdditions.STRAINER.get())){
+                ItemStackHandlerUtils.extractItem(INPUT_SLOT, recipeInputCount, false, itemHandler);
+            }
 
         }
         SoundUtils.playSound(level, worldPosition, SoundSource.BLOCKS, SoundEvents.BREWING_STAND_BREW, 1.0f, 1.0f);

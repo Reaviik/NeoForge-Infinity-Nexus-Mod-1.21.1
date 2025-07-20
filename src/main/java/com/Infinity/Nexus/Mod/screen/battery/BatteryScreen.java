@@ -87,7 +87,7 @@ public class BatteryScreen extends AbstractContainerScreen<BatteryMenu> {
         guiGraphics.blit(TEXTURE, x + 2, y-14, 2, 167, 174, 64);
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
-        energyInfoArea.render(guiGraphics);
+        energyInfoArea.renderHorizontal(guiGraphics);
     }
 
     @Override

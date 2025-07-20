@@ -94,11 +94,25 @@ public class MatterCondenserBlockEntity extends BaseMenuProviderBlockEntity {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0 -> stack.is(ModItemsProgression.RESIDUAL_MATTER.get());
-                case 1 -> false;
+                case 1 -> true;
                 case 2 -> ModUtils.isComponent(stack);
 
                 default -> super.isItemValid(slot, stack);
             };
+        }
+        @Override
+        public @NotNull ItemStack extractItem(int slot, int amount, boolean simulate, boolean fromAutomation) {
+            if (slot == 1) {
+                return super.extractItem(slot, amount, simulate, false);
+            }
+            return super.extractItem(slot, amount, simulate, fromAutomation);
+        }
+        @Override
+        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (slot == 1) {
+                return stack;
+            }
+            return super.insertItem(slot, stack, simulate);
         }
     };
 
@@ -226,7 +240,7 @@ public class MatterCondenserBlockEntity extends BaseMenuProviderBlockEntity {
     private void increaseCatalystLevel() {
         if(itemHandler.getStackInSlot(INPUT_SLOT[0]).is(ModItemsProgression.RESIDUAL_MATTER.get())){
             if(catalystLevel < 500000){
-                itemHandler.extractItem(INPUT_SLOT[0], 1, false);
+                ItemStackHandlerUtils.extractItem(INPUT_SLOT[0], 1, false, itemHandler);
                 catalystLevel++;
             }
         }
@@ -241,8 +255,8 @@ public class MatterCondenserBlockEntity extends BaseMenuProviderBlockEntity {
         ItemStack component = this.itemHandler.getStackInSlot(COMPONENT_SLOT);
         ModUtils.useComponent(component, level, this.getBlockPos());
 
-        ItemStack result = new ItemStack(ModItemsProgression.UNSTABLE_MATTER.get(), itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + 1);
-        ItemStackHandlerUtils.setStackInSlot(OUTPUT_SLOT, result, itemHandler);
+        ItemStack result = new ItemStack(ModItemsProgression.UNSTABLE_MATTER.get(), 1);
+        ItemStackHandlerUtils.insertItem(OUTPUT_SLOT, result, false, itemHandler);
 
         SoundUtils.playSoundHideoutMuffler(level, worldPosition, itemHandler, new int[]{0}, SoundEvents.BEACON_POWER_SELECT);
     }

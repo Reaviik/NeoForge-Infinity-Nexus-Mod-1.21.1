@@ -173,14 +173,12 @@ public class AssemblerBlockEntity extends BaseMenuProviderBlockEntity {
     public void drops() {
         dropContents(level, this.worldPosition, this.itemHandler);
     }
-    public IEnergyStorage getEnergyStorage() {
-        return ENERGY_STORAGE;
-    }
-    public void setEnergyLevel(int energy) {
-        this.ENERGY_STORAGE.setEnergy(energy);
-    }
+
     public IItemHandler getItemHandler(Direction direction) {
         return itemHandler;
+    }
+    public IEnergyStorage getEnergyStorage(Direction direction) {
+        return ENERGY_STORAGE;
     }
     public IFluidHandler getFluidHandler(Direction direction) {
         return FLUID_STORAGE;
@@ -226,7 +224,7 @@ public class AssemblerBlockEntity extends BaseMenuProviderBlockEntity {
         if (hasProgressFinished()) {
             craftItem(recipe);
             extractFluid(machineLevel);
-            ModUtils.ejectItemsWhePusher(pPos.above(),UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
+            ModUtils.ejectItemsWhePusher(pPos,UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
             resetProgress();
         }
     }

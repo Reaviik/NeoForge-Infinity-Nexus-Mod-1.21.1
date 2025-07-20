@@ -19,7 +19,7 @@ public class Squeezer extends BaseMachineBlock {
     public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
 
     public Squeezer(Properties pProperties) {
-        super(pProperties, CODEC);
+        super(pProperties, CODEC, null, null, null);
     }
 
     @Override

@@ -86,11 +86,11 @@ description='''${mod_description}'''
 
 [[dependencies.infinity_nexus_core]]
     #mod_group_id . MOD_ID
-    modId="com.nexus.infinity_nexus_core"
+    modId="infinity_nexus_core"
     #é obrigatório?
     mandatory=true
     #mod_version
-    versionRange="5.0.2-3.21.1"
+    versionRange="5.0.7-1.21.1"
     #Se ele vai iniciar antes ou depois de do mod, User AFTER no mod acima que é seu "addon" que usa este core
     ordering="BEFORE"
     #Quem precisa ussar esta biblioteca? BOTH, CLIENT, or SERVER
@@ -98,11 +98,11 @@ description='''${mod_description}'''
 
 [[dependencies.infinity_nexus_miner]]
     #mod_group_id . MOD_ID
-    modId="com.nexus.infinity_nexus_miner"
+    modId="infinity_nexus_miner"
     #é obrigatório?
     mandatory=true
     #mod_version
-    versionRange="5.0.4-1.21.1"
+    versionRange="5.1.3-1.21.1"
     #Se ele vai iniciar antes ou depois de do mod, User AFTER no mod acima que é seu "addon" que usa este core
     ordering="AFTER"
     #Quem precisa ussar esta biblioteca? BOTH, CLIENT, or SERVER

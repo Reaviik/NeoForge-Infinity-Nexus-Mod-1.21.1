@@ -7,7 +7,7 @@
       "tag": "infinity_nexus_core:up_3"
     },
     {
-      "item": "minecraft:blaze_powder",
+      "item": "infinity_nexus_mod:bronze_sheet",
       "count": 4
     },
     {
@@ -15,7 +15,7 @@
     }
   ],
   "output": {
-    "id": "minecraft:blaze_rod",
+    "id": "infinity_nexus_mod:bronze_rod",
     "count": 1
   }
 }

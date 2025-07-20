@@ -93,18 +93,18 @@ public class ModItemsAdditions {
     public static final DeferredItem<Item> CARBON_LEGGINGS = ITEMS.register("carbon_leggings", () -> new CarbonArmorItem(ModArmorMaterials.CARBON, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> CARBON_BOOTS = ITEMS.register("carbon_boots", () -> new CarbonArmorItem(ModArmorMaterials.CARBON, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
 
-    public static final DeferredItem<Item> CARBON_SWORD = ITEMS.register("carbon_sword",
+    public static final DeferredItem<SwordItem> CARBON_SWORD = ITEMS.register("carbon_sword",
             () -> new ModSword(ModToolTiers.CARBON,
                     new Item.Properties().stacksTo(1).fireResistant(),
                     Component.literal(""),
                     new MobEffectInstance[]{}));
-    public static final DeferredItem<Item> CARBON_PICKAXE = ITEMS.register("carbon_pickaxe", () -> new PickaxeItem(ModToolTiers.CARBON, new Item.Properties().fireResistant()));
-    public static final DeferredItem<Item> CARBON_SHOVEL = ITEMS.register("carbon_shovel", () -> new ShovelItem(ModToolTiers.CARBON, new Item.Properties().fireResistant()));
-    public static final DeferredItem<Item> CARBON_AXE = ITEMS.register("carbon_axe", () -> new AxeItem(ModToolTiers.CARBON, new Item.Properties().fireResistant()));
-    public static final DeferredItem<Item> CARBON_HOE = ITEMS.register("carbon_hoe", () -> new HoeItem(ModToolTiers.CARBON,  new Item.Properties().fireResistant()));
+    public static final DeferredItem<Item> CARBON_PICKAXE = ITEMS.register("carbon_pickaxe", () -> new PickaxeItem(ModToolTiers.CARBON, new Item.Properties().fireResistant().attributes(PickaxeItem.createAttributes(ModToolTiers.CARBON, ModToolTiers.CARBON.getAttackDamageBonus()-10, ModToolTiers.CARBON.getSpeed()))));
+    public static final DeferredItem<Item> CARBON_SHOVEL = ITEMS.register("carbon_shovel", () -> new ShovelItem(ModToolTiers.CARBON, new Item.Properties().fireResistant().attributes(ShovelItem.createAttributes(ModToolTiers.CARBON, ModToolTiers.CARBON.getAttackDamageBonus()-12, ModToolTiers.CARBON.getSpeed()))));
+    public static final DeferredItem<Item> CARBON_AXE = ITEMS.register("carbon_axe", () -> new AxeItem(ModToolTiers.CARBON, new Item.Properties().fireResistant().attributes(AxeItem.createAttributes(ModToolTiers.CARBON, ModToolTiers.CARBON.getAttackDamageBonus()-7, ModToolTiers.CARBON.getSpeed()))));
+    public static final DeferredItem<Item> CARBON_HOE = ITEMS.register("carbon_hoe", () -> new HoeItem(ModToolTiers.CARBON,  new Item.Properties().fireResistant().attributes(HoeItem.createAttributes(ModToolTiers.CARBON, ModToolTiers.CARBON.getAttackDamageBonus()-13, ModToolTiers.CARBON.getSpeed()))));
     public static final DeferredItem<Item> CARBON_BOW = ITEMS.register("carbon_bow", () -> new ModBow(ModToolTiers.CARBON, new Item.Properties().durability(1500).fireResistant(), 20));
 
-    public static final DeferredItem<Item> INFINITY_SWORD = ITEMS.register("infinity_sword",
+    public static final DeferredItem<SwordItem> INFINITY_SWORD = ITEMS.register("infinity_sword",
             () -> new ModSword(ModToolTiers.INFINITY,
                     new Item.Properties().stacksTo(1).fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)),
                     Component.translatable("tooltip.infinity_nexus_mod.infinity_sword"),
@@ -112,7 +112,7 @@ public class ModItemsAdditions {
                             new MobEffectInstance(MobEffects.WEAKNESS, 200, 2),
                             new MobEffectInstance(MobEffects.WITHER, 200, 2)
             }));
-    public static final DeferredItem<Item> INFINITY_3D_SWORD = ITEMS.register("infinity_3d_sword",
+    public static final DeferredItem<SwordItem> INFINITY_3D_SWORD = ITEMS.register("infinity_3d_sword",
             () -> new ModSword(ModToolTiers.INFINITY,
                     new Item.Properties().stacksTo(1).fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)),
                     Component.translatable("tooltip.infinity_nexus_mod.infinity_3d_sword"),
@@ -120,12 +120,12 @@ public class ModItemsAdditions {
                             new MobEffectInstance(MobEffects.WEAKNESS, 200, 2),
                             new MobEffectInstance(MobEffects.WITHER, 200, 2)
                     }));
-    public static final DeferredItem<Item> INFINITY_HAMMER = ITEMS.register("infinity_hammer", () -> new HammerItem(ModToolTiers.INFINITY,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
-    public static final DeferredItem<Item> INFINITY_PAXEL = ITEMS.register("infinity_paxel", () -> new PaxelItem(ModToolTiers.INFINITY,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)), Component.translatable("tooltip.infinity_nexus_mod.infinity_paxel"), true));
-    public static final DeferredItem<Item> INFINITY_PICKAXE = ITEMS.register("infinity_pickaxe", () -> new PickaxeItem(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
-    public static final DeferredItem<Item> INFINITY_SHOVEL = ITEMS.register("infinity_shovel", () -> new ShovelItem(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
-    public static final DeferredItem<Item> INFINITY_AXE = ITEMS.register("infinity_axe", () -> new AxeItem(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
-    public static final DeferredItem<Item> INFINITY_HOE = ITEMS.register("infinity_hoe", () -> new HoeItem(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
+    public static final DeferredItem<Item> INFINITY_HAMMER = ITEMS.register("infinity_hammer", () -> new HammerItem(ModToolTiers.INFINITY,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(PickaxeItem.createAttributes(ModToolTiers.INFINITY, ModToolTiers.INFINITY.getAttackDamageBonus()-10, ModToolTiers.INFINITY.getSpeed()))));
+    public static final DeferredItem<Item> INFINITY_PAXEL = ITEMS.register("infinity_paxel", () -> new PaxelItem(ModToolTiers.INFINITY,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(PickaxeItem.createAttributes(ModToolTiers.INFINITY, ModToolTiers.INFINITY.getAttackDamageBonus()-5, ModToolTiers.INFINITY.getSpeed())), Component.translatable("tooltip.infinity_nexus_mod.infinity_paxel"), true));
+    public static final DeferredItem<Item> INFINITY_PICKAXE = ITEMS.register("infinity_pickaxe", () -> new PickaxeItem(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(PickaxeItem.createAttributes(ModToolTiers.INFINITY, ModToolTiers.INFINITY.getAttackDamageBonus()-10, ModToolTiers.INFINITY.getSpeed()))));
+    public static final DeferredItem<Item> INFINITY_SHOVEL = ITEMS.register("infinity_shovel", () -> new ShovelItem(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(ShovelItem.createAttributes(ModToolTiers.INFINITY, ModToolTiers.INFINITY.getAttackDamageBonus()-12, ModToolTiers.INFINITY.getSpeed()))));
+    public static final DeferredItem<Item> INFINITY_AXE = ITEMS.register("infinity_axe", () -> new AxeItem(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(AxeItem.createAttributes(ModToolTiers.INFINITY, ModToolTiers.INFINITY.getAttackDamageBonus()-7, ModToolTiers.INFINITY.getSpeed()))));
+    public static final DeferredItem<Item> INFINITY_HOE = ITEMS.register("infinity_hoe", () -> new HoeItem(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(HoeItem.createAttributes(ModToolTiers.INFINITY, ModToolTiers.INFINITY.getAttackDamageBonus()-13, ModToolTiers.INFINITY.getSpeed()))));
     public static final DeferredItem<Item> INFINITY_BOW = ITEMS.register("infinity_bow", () -> new ModBow(ModToolTiers.INFINITY, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)), 50));
 
     public static final DeferredItem<Item> INFINITY_HELMET = ITEMS.register("infinity_helmet", () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1).rarity(Rarity.RARE).fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
@@ -133,7 +133,7 @@ public class ModItemsAdditions {
     public static final DeferredItem<Item> INFINITY_LEGGINGS = ITEMS.register("infinity_leggings", () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1).rarity(Rarity.RARE).fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
     public static final DeferredItem<Item> INFINITY_BOOTS = ITEMS.register("infinity_boots", () -> new InfinityArmorItem(ModArmorMaterials.INFINITY, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).rarity(Rarity.RARE).fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
 
-    public static final DeferredItem<Item> IMPERIAL_INFINITY_SWORD = ITEMS.register("imperial_infinity_sword",
+    public static final DeferredItem<SwordItem> IMPERIAL_INFINITY_SWORD = ITEMS.register("imperial_infinity_sword",
             () -> new ModSword(ModToolTiers.IMPERIAL,
                     new Item.Properties().stacksTo(1).fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)),
                     Component.translatable("tooltip.infinity_nexus_mod.imperial_infinity_sword"),
@@ -142,7 +142,7 @@ public class ModItemsAdditions {
                             new MobEffectInstance(MobEffects.WITHER, 200, 3),
                             new MobEffectInstance(MobEffects.POISON, 200, 3)
                     }));
-    public static final DeferredItem<Item> IMPERIAL_INFINITY_3D_SWORD = ITEMS.register("imperial_infinity_3d_sword",
+    public static final DeferredItem<SwordItem> IMPERIAL_INFINITY_3D_SWORD = ITEMS.register("imperial_infinity_3d_sword",
             () -> new ModSword(ModToolTiers.IMPERIAL,
                     new Item.Properties().stacksTo(1).fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)),
                     Component.translatable("tooltip.infinity_nexus_mod.imperial_infinity_3d_sword"),
@@ -151,12 +151,12 @@ public class ModItemsAdditions {
                             new MobEffectInstance(MobEffects.WITHER, 200, 3),
                             new MobEffectInstance(MobEffects.POISON, 200, 3)
                     }));
-    public static final DeferredItem<Item> IMPERIAL_INFINITY_HAMMER = ITEMS.register("imperial_infinity_hammer", () -> new HammerItem(ModToolTiers.IMPERIAL, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
-    public static final DeferredItem<Item> IMPERIAL_INFINITY_PAXEL = ITEMS.register("imperial_infinity_paxel", () -> new PaxelItem(ModToolTiers.IMPERIAL,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)), Component.translatable("tooltip.infinity_nexus_mod.infinity_paxel"), true));
-    public static final DeferredItem<Item> IMPERIAL_INFINITY_PICKAXE = ITEMS.register("imperial_infinity_pickaxe", () -> new PickaxeItem(ModToolTiers.IMPERIAL,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
-    public static final DeferredItem<Item> IMPERIAL_INFINITY_SHOVEL = ITEMS.register("imperial_infinity_shovel", () -> new ShovelItem(ModToolTiers.IMPERIAL, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
-    public static final DeferredItem<Item> IMPERIAL_INFINITY_AXE = ITEMS.register("imperial_infinity_axe", () -> new AxeItem(ModToolTiers.IMPERIAL, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
-    public static final DeferredItem<Item> IMPERIAL_INFINITY_HOE = ITEMS.register("imperial_infinity_hoe", () -> new HoeItem(ModToolTiers.IMPERIAL,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));
+    public static final DeferredItem<Item> IMPERIAL_INFINITY_HAMMER = ITEMS.register("imperial_infinity_hammer", () -> new HammerItem(ModToolTiers.IMPERIAL, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(PickaxeItem.createAttributes(ModToolTiers.IMPERIAL, ModToolTiers.IMPERIAL.getAttackDamageBonus()-10, ModToolTiers.IMPERIAL.getSpeed()))));
+    public static final DeferredItem<Item> IMPERIAL_INFINITY_PAXEL = ITEMS.register("imperial_infinity_paxel", () -> new PaxelItem(ModToolTiers.IMPERIAL,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(PickaxeItem.createAttributes(ModToolTiers.IMPERIAL, ModToolTiers.IMPERIAL.getAttackDamageBonus()-5, ModToolTiers.IMPERIAL.getSpeed())), Component.translatable("tooltip.infinity_nexus_mod.infinity_paxel"), true));
+    public static final DeferredItem<Item> IMPERIAL_INFINITY_PICKAXE = ITEMS.register("imperial_infinity_pickaxe", () -> new PickaxeItem(ModToolTiers.IMPERIAL,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(PickaxeItem.createAttributes(ModToolTiers.IMPERIAL, ModToolTiers.IMPERIAL.getAttackDamageBonus()-10, ModToolTiers.IMPERIAL.getSpeed()))));
+    public static final DeferredItem<Item> IMPERIAL_INFINITY_SHOVEL = ITEMS.register("imperial_infinity_shovel", () -> new ShovelItem(ModToolTiers.IMPERIAL, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(ShovelItem.createAttributes(ModToolTiers.IMPERIAL, ModToolTiers.IMPERIAL.getAttackDamageBonus()-12, ModToolTiers.IMPERIAL.getSpeed()))));
+    public static final DeferredItem<Item> IMPERIAL_INFINITY_AXE = ITEMS.register("imperial_infinity_axe", () -> new AxeItem(ModToolTiers.IMPERIAL, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(AxeItem.createAttributes(ModToolTiers.IMPERIAL, ModToolTiers.IMPERIAL.getAttackDamageBonus()-7, ModToolTiers.IMPERIAL.getSpeed()))));
+    public static final DeferredItem<Item> IMPERIAL_INFINITY_HOE = ITEMS.register("imperial_infinity_hoe", () -> new HoeItem(ModToolTiers.IMPERIAL,  new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)).attributes(HoeItem.createAttributes(ModToolTiers.IMPERIAL, ModToolTiers.IMPERIAL.getAttackDamageBonus()-13, ModToolTiers.IMPERIAL.getSpeed()))));
     public static final DeferredItem<Item> IMPERIAL_INFINITY_BOW = ITEMS.register("imperial_infinity_bow", () -> new ModBow(ModToolTiers.IMPERIAL, new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true)),60));
 
     public static final DeferredItem<Item> IMPERIAL_INFINITY_HELMET = ITEMS.register("imperial_infinity_helmet", () -> new ImperialInfinityArmorItem(ModArmorMaterials.IMPERIAL, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).fireResistant().component(DataComponents.UNBREAKABLE, new Unbreakable(true))));

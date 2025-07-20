@@ -75,6 +75,9 @@ public class ModEventBusEvents {
         event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, ModBlockEntities.SQUEEZER_BE.get(), SqueezerBlockEntity::getEnergyStorage);
         event.registerBlockEntity(Capabilities.FluidHandler.BLOCK, ModBlockEntities.SQUEEZER_BE.get(), SqueezerBlockEntity::getFluidHandler);
 
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.COMPACTOR_AUTO_BE.get(), CompactorAutoBlockEntity::getItemHandler);
+        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, ModBlockEntities.COMPACTOR_AUTO_BE.get(), CompactorAutoBlockEntity::getEnergyStorage);
+
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.TANK_BE.get(), TankBlockEntity::getItemHandler);
         event.registerBlockEntity(Capabilities.FluidHandler.BLOCK, ModBlockEntities.TANK_BE.get(), TankBlockEntity::getFluidHandler);
 

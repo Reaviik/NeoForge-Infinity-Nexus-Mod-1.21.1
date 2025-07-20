@@ -17,7 +17,7 @@ public class ModSword extends SwordItem {
     private final MobEffectInstance[] effects;
 
     public ModSword(Tier pTier, Properties pProperties, Component tooltip, MobEffectInstance[] effects) {
-        super(pTier, pProperties);
+        super(pTier, pProperties.attributes(SwordItem.createAttributes(pTier, pTier.getAttackDamageBonus(), pTier.getSpeed())));
 
         this.translation = tooltip;
         this.effects = effects;

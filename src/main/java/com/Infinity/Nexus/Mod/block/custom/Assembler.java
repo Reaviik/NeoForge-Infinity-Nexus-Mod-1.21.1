@@ -16,7 +16,7 @@ public class Assembler extends BaseMachineBlock {
     public static final MapCodec<BaseEntityBlock> CODEC = simpleCodec(Assembler::new);
 
     public Assembler(Properties properties) {
-        super(properties, CODEC);
+        super(properties, CODEC, null, null, null);
     }
 
     @Override

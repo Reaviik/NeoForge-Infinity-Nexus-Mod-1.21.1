@@ -25,7 +25,7 @@ public class Battery extends BaseMachineBlock {
     public static final MapCodec<BaseEntityBlock> CODEC = simpleCodec(Battery::new);
     int energy = 0;
     public Battery(Properties properties) {
-        super(properties, CODEC);
+        super(properties, CODEC, null, null, null);
     }
 
 

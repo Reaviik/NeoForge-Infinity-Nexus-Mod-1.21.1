@@ -130,7 +130,7 @@ public class DisplayBlockEntity extends BlockEntity {
                     //Não Criativo
                     player.getMainHandItem().shrink(stack.getCount());
                 }
-                player.sendSystemMessage(Component.literal(InfinityNexusMod.message + " Display atualizado!"));
+                player.sendSystemMessage(Component.literal(InfinityNexusMod.message + "Display atualizado!"));
                 setBlockModel(this.itemHandler.getStackInSlot(0));
             }
         }else{

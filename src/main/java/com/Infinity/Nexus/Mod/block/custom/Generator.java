@@ -19,7 +19,7 @@ public class Generator extends BaseMachineBlock {
     public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
 
     public Generator(Properties pProperties) {
-        super(pProperties, CODEC);
+        super(pProperties, CODEC, null, null, null);
     }
     @Override
     protected void dropContents(Level level, BlockPos pos, BlockEntity blockEntity) {

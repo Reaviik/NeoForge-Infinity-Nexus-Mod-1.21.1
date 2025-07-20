@@ -82,7 +82,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItemsAdditions.INFINITY_SINGULARITY.get());
         basicItem(ModItemsAdditions.ITEM_DISLOCATOR.get());
         basicItem(ModItemsAdditions.PORTAL_ACTIVATOR.get());
-        simpletools(ModItemsAdditions.INFINITY_SWORD);
+        handheldItem(ModItemsAdditions.INFINITY_SWORD.get());
         simpletools(ModItemsAdditions.INFINITY_HAMMER);
         simpletools(ModItemsAdditions.INFINITY_PAXEL);
         simpletools(ModItemsAdditions.INFINITY_PICKAXE);
@@ -97,12 +97,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItemsAdditions.CARBON_CHESTPLATE.get());
         basicItem(ModItemsAdditions.CARBON_LEGGINGS.get());
         basicItem(ModItemsAdditions.CARBON_BOOTS.get());
-        simpletools(ModItemsAdditions.CARBON_SWORD);
+        handheldItem(ModItemsAdditions.CARBON_SWORD.get());
         simpletools(ModItemsAdditions.CARBON_PICKAXE);
         simpletools(ModItemsAdditions.CARBON_AXE);
         simpletools(ModItemsAdditions.CARBON_SHOVEL);
         simpletools(ModItemsAdditions.CARBON_HOE);
-        simpletools(ModItemsAdditions.IMPERIAL_INFINITY_SWORD);
+        handheldItem(ModItemsAdditions.IMPERIAL_INFINITY_SWORD.get());
         simpletools(ModItemsAdditions.IMPERIAL_INFINITY_HAMMER);
         simpletools(ModItemsAdditions.IMPERIAL_INFINITY_PAXEL);
         simpletools(ModItemsAdditions.IMPERIAL_INFINITY_PICKAXE);

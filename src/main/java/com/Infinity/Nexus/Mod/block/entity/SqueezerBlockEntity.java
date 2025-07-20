@@ -24,6 +24,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.energy.IEnergyStorage;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
@@ -77,6 +78,16 @@ public class SqueezerBlockEntity extends BaseMenuProviderBlockEntity{
         }
         public @NotNull ItemStack extractItem(int slot, int amount, boolean simulate, boolean fromAutomation) {
             return (slot == 1 || slot == 3)? super.extractItem(slot, amount, simulate, false) : super.extractItem(slot, amount, simulate, fromAutomation);
+        }
+        @Override
+        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (slot == 1) {
+                return stack;
+            }
+            if (slot == 2) {
+                return stack.getCapability(Capabilities.FluidHandler.ITEM) == null ? stack : super.insertItem(slot, stack, simulate);
+            }
+            return super.insertItem(slot, stack, simulate);
         }
     };
     private FluidTank createFluidStorage() {
@@ -178,7 +189,7 @@ public class SqueezerBlockEntity extends BaseMenuProviderBlockEntity{
 
             if (hasProgressFinished()) {
                 craftItem(recipe);
-                ModUtils.ejectItemsWhePusher(pPos.above(),UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
+                ModUtils.ejectItemsWhePusher(pPos,UPGRADE_SLOTS, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
                 resetProgress();
             }
         }catch (Exception e){

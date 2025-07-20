@@ -2,6 +2,7 @@ package com.Infinity.Nexus.Mod.worldgen;
 
 import com.Infinity.Nexus.Core.utils.GetResourceLocation;
 import com.Infinity.Nexus.Mod.InfinityNexusMod;
+import com.Infinity.Nexus.Mod.config.ConfigUtils;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;

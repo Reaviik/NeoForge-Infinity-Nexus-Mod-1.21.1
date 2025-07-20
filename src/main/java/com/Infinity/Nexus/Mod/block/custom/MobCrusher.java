@@ -23,7 +23,7 @@ public class MobCrusher extends BaseMachineBlock {
     public static final MapCodec<BaseEntityBlock> CODEC = simpleCodec(MobCrusher::new);
 
     public MobCrusher(Properties pProperties) {
-        super(pProperties, CODEC);
+        super(pProperties, CODEC, null, null, null);
     }
 
     @Override

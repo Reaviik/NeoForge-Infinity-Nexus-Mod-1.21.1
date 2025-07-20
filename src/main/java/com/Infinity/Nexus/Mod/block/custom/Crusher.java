@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 public class Crusher extends BaseMachineBlock {
     public static final MapCodec<BaseEntityBlock> CODEC = simpleCodec(Crusher::new);
     public Crusher(Properties properties) {
-        super(properties, CODEC);
+        super(properties, CODEC, null, null, null);
     }
 
 

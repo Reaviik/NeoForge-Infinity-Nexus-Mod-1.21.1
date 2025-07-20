@@ -138,6 +138,8 @@ public abstract class BaseMenuProviderBlockEntity extends BaseBlockEntity implem
     protected void increaseCraftingProgress() {
         data.set(0, progress);
         progress++;
+        setChanged();
+
     }
     protected void resetProgress() {
         data.set(0, 0);

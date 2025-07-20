@@ -1,5 +1,6 @@
 package com.Infinity.Nexus.Mod.block.custom;
 
+import com.Infinity.Nexus.Mod.InfinityNexusMod;
 import com.Infinity.Nexus.Mod.block.entity.DisplayBlockEntity;
 import com.Infinity.Nexus.Mod.block.entity.ModBlockEntities;
 import com.mojang.serialization.MapCodec;
@@ -87,7 +88,7 @@ public class ItemDisplay extends BaseEntityBlock {
             if(player.getOffhandItem().getItem() == Items.STICK){
                 BlockState blockState = state.getValue(LIT) < 7 ? state.setValue(LIT, state.getValue(LIT) + 1) : state.setValue(LIT, 0);
                 level.setBlock(pos, blockState, 3);
-                player.sendSystemMessage(Component.literal("Display Alterado"));
+                player.sendSystemMessage(Component.literal(InfinityNexusMod.message + "Display Alterado"));
             }else{
                 setStack(player.getMainHandItem().copy(), (DisplayBlockEntity) level.getBlockEntity(pos), player);
             }

@@ -10,26 +10,10 @@ import net.minecraft.world.level.block.Block;
 import java.util.function.Supplier;
 
 public enum ModToolTiers implements Tier {
-    /*
-    public static final Tier CARBON = new SimpleTier(
-            ModTags.Blocks.INCORRECT_FOR_CARBON_TOOL,
-            1500, 8.0F, 0F, 30,
-            () -> Ingredient.of(ModItemsProgression.CARBON_PLATE.get()));
 
-    public static final Tier INFINITY = new SimpleTier(
-             ModTags.Blocks.INCORRECT_FOR_INFINITY_TOOL,
-            0, 30.0F, 0F, 70,
-            () -> Ingredient.of(ModItemsAdditions.INFINITY_INGOT.get()));
-
-    public static final Tier IMPERIAL = new SimpleTier(
-            ModTags.Blocks.INCORRECT_FOR_IMPERIAL_TOOL,
-            0, 35, -1, 80,
-            () -> Ingredient.of(ModItemsAdditions.INFINITY_INGOT.get()));
-}
-*/
-    CARBON (ModTags.Blocks.INCORRECT_FOR_CARBON_TOOL, 1500, 8.0F, 0F, 30, () -> Ingredient.of(ModItemsProgression.CARBON_PLATE.get())),
-    INFINITY (ModTags.Blocks.INCORRECT_FOR_INFINITY_TOOL, 0, 30.0F, 0F, 70, () -> Ingredient.of(ModItemsAdditions.INFINITY_INGOT.get())),
-    IMPERIAL (ModTags.Blocks.INCORRECT_FOR_IMPERIAL_TOOL, 0, 35, -1, 80, () -> Ingredient.of(ModItemsAdditions.INFINIUM_STELLARUM_INGOT.get()));
+    CARBON (ModTags.Blocks.INCORRECT_FOR_CARBON_TOOL, 1500, 4.0F, 6F, 30, () -> Ingredient.of(ModItemsProgression.CARBON_PLATE.get())),
+    INFINITY (ModTags.Blocks.INCORRECT_FOR_INFINITY_TOOL, 0, 9.0F, 10F, 70, () -> Ingredient.of(ModItemsAdditions.INFINITY_INGOT.get())),
+    IMPERIAL (ModTags.Blocks.INCORRECT_FOR_IMPERIAL_TOOL, 0, 12.0F, 20F, 80, () -> Ingredient.of(ModItemsAdditions.INFINIUM_STELLARUM_INGOT.get()));
 
     private final TagKey<Block> incorrectForDrops;
     private final int maxUses;

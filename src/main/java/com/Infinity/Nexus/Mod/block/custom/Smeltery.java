@@ -16,7 +16,7 @@ public class Smeltery extends BaseMachineBlock {
     public static final MapCodec<BaseEntityBlock> CODEC = simpleCodec(Smeltery::new);
 
     public Smeltery(Properties pProperties) {
-        super(pProperties, CODEC);
+        super(pProperties, CODEC, null, null, null);
     }
 
     @Override

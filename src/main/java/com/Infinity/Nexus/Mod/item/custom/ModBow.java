@@ -2,10 +2,7 @@ package com.Infinity.Nexus.Mod.item.custom;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.item.BowItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -14,7 +11,7 @@ public class ModBow extends BowItem {
     private final int damage;
     protected final Tier tier;
     public ModBow(Tier tier, Properties properties, int damage) {
-        super(properties);
+        super(properties.stacksTo(1));
         this.damage = damage;
         this.tier = tier;
     }

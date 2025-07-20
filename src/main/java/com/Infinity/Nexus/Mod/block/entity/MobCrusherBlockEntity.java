@@ -46,6 +46,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.common.util.Lazy;
 import net.neoforged.neoforge.energy.IEnergyStorage;
 import net.neoforged.neoforge.fluids.FluidStack;
@@ -403,23 +404,24 @@ public class MobCrusherBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private  void execute(Mob mob, BlockPos pPos, int machineLevel) {
+        if(!(level instanceof ServerLevel serverLevel)){
+            return;
+        }
 
-        //ItemStack component = this.itemHandler.getStackInSlot(COMPONENT_SLOT);
-
-        //ModUtils.useComponent(component, level, this.getBlockPos());
-        IFFakePlayer player = GetFakePlayer.get((ServerLevel) level);
+        IFFakePlayer player = GetFakePlayer.get(serverLevel);
         player.setItemInHand(InteractionHand.MAIN_HAND, this.itemHandler.getStackInSlot(SWORD_SLOT));
-        ServerPlayer randomPlayer = ((ServerLevel) this.level).getRandomPlayer();
+        ServerPlayer randomPlayer = (serverLevel).getRandomPlayer();
         DamageSource source = player.damageSources().playerAttack((randomPlayer != null) && machineLevel >= 7 ? randomPlayer : player);
-        //TODO REVISE
-        //LootTable table1 = Objects.requireNonNull(this.level.getServer()).getLootData().getLootTable(mob.getLootTable());
-        LootTable table = Objects.requireNonNull(this.level.getServer()).reloadableRegistries().getLootTable(mob.getLootTable());
-        LootParams.Builder context = new LootParams.Builder((ServerLevel) this.level)
+        LootTable table = level.getServer().reloadableRegistries().getLootTable(mob.getLootTable());
+        LootParams.Builder context = new LootParams.Builder(serverLevel)
                 .withParameter(LootContextParams.THIS_ENTITY, mob)
                 .withParameter(LootContextParams.DAMAGE_SOURCE, source)
                 .withParameter(LootContextParams.ORIGIN, new Vec3(pPos.getX(), pPos.getY(), pPos.getZ()))
+                .withParameter(LootContextParams.ATTACKING_ENTITY, player)
+                .withParameter(LootContextParams.TOOL, itemHandler.getStackInSlot(SWORD_SLOT))
                 .withParameter(LootContextParams.LAST_DAMAGE_PLAYER, player);
-        table.getRandomItems(context.create(LootContextParamSets.ENTITY)).forEach(stack ->{
+
+        table.getRandomItems(context.create(LootContextParamSets.ENTITY)).forEach(stack -> {
             insertItemOnInventory(stack);
             for(int loot = 0; loot < machineLevel; loot++) {
                 int rand = RandomSource.create().nextInt(10);
@@ -434,8 +436,8 @@ public class MobCrusherBlockEntity extends BlockEntity implements MenuProvider {
         if (mob.captureDrops() != null) {
             extra.addAll(mob.captureDrops());
         }
-        //TODO FIX
-        //ForgeHooks.onLivingDrops(mob, source, extra, 3, true);
+
+        CommonHooks.onLivingDrops(mob, source, extra,  true);
         player.attack(mob);
         extra.forEach(itemEntity -> {
             insertItemOnInventory(itemEntity.getItem());
@@ -443,7 +445,7 @@ public class MobCrusherBlockEntity extends BlockEntity implements MenuProvider {
         });
         mob.setHealth(0);
         SendParticlesPath.makePath((ServerLevel) this.getLevel(), ParticleTypes.ELECTRIC_SPARK, worldPosition.above(), mob.getOnPos().above(2), 0.5D, 0.2D, 0.5D);
-        insertExpense(mob.getExperienceReward((ServerLevel) level, player));
+        insertExpense(mob.getExperienceReward(serverLevel, player));
     }
 
 
@@ -503,7 +505,7 @@ public class MobCrusherBlockEntity extends BlockEntity implements MenuProvider {
                     BlockPos targetPos = new BlockPos(xl, yl, zl);
                     if (blockEntity.getBlockPos().equals(this.getBlockPos())) {
                         level.addFreshEntity(new ItemEntity(level, xl, yl + 1, zl, itemHandler.getStackInSlot(LINK_SLOT).copy()));
-                        itemHandler.extractItem(LINK_SLOT, 1, false);
+                        ItemStackHandlerUtils.extractItem(LINK_SLOT, 1, false, itemHandler);
                     }
                     if(!itemHandler.getStackInSlot(OUTPUT_SLOT[7]).isEmpty()) {
                         if (blockEntity != null && canLink(blockEntity)) {
@@ -522,7 +524,7 @@ public class MobCrusherBlockEntity extends BlockEntity implements MenuProvider {
                                     for (int outputSlot : OUTPUT_SLOT) {
                                         if (!itemHandler.getStackInSlot(outputSlot).isEmpty() && iItemHandler.isItemValid(slot, itemStack.copy()) && ModUtils.canPlaceItemInContainer(itemHandler.getStackInSlot(outputSlot).copy(), slot, iItemHandler)) {
                                             iItemHandler.insertItem(slot, itemHandler.getStackInSlot(outputSlot).copy(), false);
-                                            itemHandler.extractItem(outputSlot, itemHandler.getStackInSlot(outputSlot).getCount(), false);
+                                            ItemStackHandlerUtils.extractItem(outputSlot, itemHandler.getStackInSlot(outputSlot).getCount(), false, itemHandler);
                                             success.set(true);
                                             break;
                                         }

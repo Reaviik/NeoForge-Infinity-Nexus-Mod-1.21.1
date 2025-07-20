@@ -118,7 +118,17 @@ public class InfuserBlockEntity extends BaseBlockEntity {
         progress = pTag.getInt("infuser.progress");
     }
     public ItemStack getRenderStack(){
-        return this.itemHandler.getStackInSlot(INPUT_SLOT).isEmpty() ? ItemStack.EMPTY : this.itemHandler.getStackInSlot(INPUT_SLOT);
+        ItemStack stack = this.itemHandler.getStackInSlot(OUTPUT_SLOT);
+        ItemStack input = this.itemHandler.getStackInSlot(INPUT_SLOT);
+        if(!stack.isEmpty() && !input.isEmpty()){
+            return input;
+        }else if(stack.isEmpty() && !input.isEmpty()){
+            return input;
+        }else if(!stack.isEmpty() && input.isEmpty()){
+            return stack;
+        }else{
+            return ItemStack.EMPTY;
+        }
     }
 
     public void drops() {
@@ -164,7 +174,7 @@ public class InfuserBlockEntity extends BaseBlockEntity {
         if (hasProgressFinished()) {
             craftItem(recipe);
             startPedestalAnimation(pPos, false, pedestals);
-            ModUtils.ejectItemsWhePusher(pPos.above(),new int[]{INPUT_SLOT}, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
+            ModUtils.ejectItemsWhePusher(pPos,new int[]{INPUT_SLOT}, new int[]{OUTPUT_SLOT}, itemHandler, pLevel);
             this.getLevel().setBlock(pPos, pState.setValue(Infuser.LIT, 0), 3);
             resetProgress();
         }

@@ -20,6 +20,8 @@ import com.Infinity.Nexus.Mod.recipe.ModRecipes;
 import com.Infinity.Nexus.Mod.screen.ModMenuTypes;
 import com.Infinity.Nexus.Mod.screen.assembler.AssemblerScreen;
 import com.Infinity.Nexus.Mod.screen.battery.BatteryScreen;
+import com.Infinity.Nexus.Mod.screen.compactor.CompactorMenu;
+import com.Infinity.Nexus.Mod.screen.compactor.CompactorScreen;
 import com.Infinity.Nexus.Mod.screen.condenser.CondenserScreen;
 import com.Infinity.Nexus.Mod.screen.crusher.CrusherScreen;
 import com.Infinity.Nexus.Mod.screen.factory.FactoryScreen;
@@ -110,6 +112,7 @@ public class InfinityNexusMod
         event.register(ModMenuTypes.SQUEEZER_MENU.get(), SqueezerScreen::new);
         event.register(ModMenuTypes.SMELTERY_MENU.get(), SmelteryScreen::new);
         event.register(ModMenuTypes.GENERATOR_MENU.get(), GeneratorScreen::new);
+        event.register(ModMenuTypes.COMPACTOR_AUTO_MENU.get(), CompactorScreen::new);
         event.register(ModMenuTypes.FERMENTATION_BARREL_MENU.get(), FermentationBarrelScreen::new);
         event.register(ModMenuTypes.RECYCLER_MENU.get(), RecyclerScreen::new);
         event.register(ModMenuTypes.MATTER_CONDENSER_MENU.get(), CondenserScreen::new);
@@ -189,12 +192,12 @@ public class InfinityNexusMod
         }
         @SubscribeEvent
         public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event){
-            event.registerBlockEntityRenderer(ModBlockEntities.TECH_PEDESTAL_BE.get(), context -> new TechPedestalBlockRenderer("tech"));
-            event.registerBlockEntityRenderer(ModBlockEntities.MAGIC_PEDESTAL_BE.get(), context -> new MagicPedestalBlockRenderer("magic"));
-            event.registerBlockEntityRenderer(ModBlockEntities.DECOR_PEDESTAL_BE.get(), context -> new DecorPedestalBlockRenderer("decor"));
-            event.registerBlockEntityRenderer(ModBlockEntities.EXPLORATION_PEDESTAL_BE.get(), context -> new ExplorationPedestalBlockRenderer("exploration"));
-            event.registerBlockEntityRenderer(ModBlockEntities.RESOURCE_PEDESTAL_BE.get(), context -> new ResourcePedestalBlockRenderer("resource"));
-            event.registerBlockEntityRenderer(ModBlockEntities.CREATIVITY_PEDESTAL_BE.get(), context -> new CreativityPedestalBlockRenderer("creativity"));
+            event.registerBlockEntityRenderer(ModBlockEntities.TECH_PEDESTAL_BE.get(), context -> new PedestalBlockRenderer("tech"));
+            event.registerBlockEntityRenderer(ModBlockEntities.MAGIC_PEDESTAL_BE.get(), context -> new PedestalBlockRenderer("magic"));
+            event.registerBlockEntityRenderer(ModBlockEntities.DECOR_PEDESTAL_BE.get(), context -> new PedestalBlockRenderer("decor"));
+            event.registerBlockEntityRenderer(ModBlockEntities.EXPLORATION_PEDESTAL_BE.get(), context -> new PedestalBlockRenderer("exploration"));
+            event.registerBlockEntityRenderer(ModBlockEntities.RESOURCE_PEDESTAL_BE.get(), context -> new PedestalBlockRenderer("resource"));
+            event.registerBlockEntityRenderer(ModBlockEntities.CREATIVITY_PEDESTAL_BE.get(), context -> new PedestalBlockRenderer("creativity"));
         }
     }
     private void setup(final FMLCommonSetupEvent event)

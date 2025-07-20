@@ -88,6 +88,7 @@ public class ModBlockLootTablesAdditions extends BlockLootSubProvider {
         dropSelf(ModBlocksAdditions.DEPOT.get());
         dropSelf(ModBlocksAdditions.DEPOT_STONE.get());
         dropSelf(ModBlocksAdditions.COMPACTOR.get());
+        dropSelf(ModBlocksAdditions.COMPACTOR_AUTO.get());
         dropSelf(ModBlocksAdditions.TRANSLOCATOR_ITEM.get());
         dropSelf(ModBlocksAdditions.TRANSLOCATOR_ENERGY.get());
         dropSelf(ModBlocksAdditions.TRANSLOCATOR_FLUID.get());
@@ -158,7 +159,6 @@ public class ModBlockLootTablesAdditions extends BlockLootSubProvider {
 
         dropSelf(ModBlocksAdditions.ENTITY_CENTRALIZER.get());
         dropSelf(ModBlocksAdditions.ENTITY_DISPLAY.get());
-
 
     }
 

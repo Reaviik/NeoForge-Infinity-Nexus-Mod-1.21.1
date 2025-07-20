@@ -19,7 +19,7 @@ public class Factory extends BaseMachineBlock {
     public static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 16, 13);
 
     public Factory(Properties pProperties) {
-        super(pProperties, CODEC);
+        super(pProperties, CODEC, null, null, null);
     }
 
     @Override
